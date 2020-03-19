@@ -61,7 +61,7 @@
   &:before {
     content: "";
     display: flex;
-    background: url(../../img/Shape_13_copy_6.png), rgba(255, 194, 14, 1);
+    background: url(../img/Shape_13_copy_6.png), rgba(255, 194, 14, 1);
     height: 95%;
     width: 15%;
     background-repeat: no-repeat;
@@ -76,37 +76,37 @@
 .email {
   &::before {
     content: "";
-    background: url(../../img/email.png);
+    background: url(../img/email.png);
   }
 }
 .portfolio {
   &::before {
     content: "";
-    background: url(../../img/folder.png);
+    background: url(../img/folder.png);
   }
 }
 .birth {
   &::before {
     content: "";
-    background: url(../../img/birth.png);
+    background: url(../img/birth.png);
   }
 }
 .marritial-status {
   &::before {
     content: "";
-    background: url(../../img/marritial.png);
+    background: url(../img/marritial.png);
   }
 }
 .address {
   &::before {
     content: "";
-    background: url(../../img/address.png);
+    background: url(../img/address.png);
   }
 }
 .knowlege {
   &::before {
     content: "";
-    background: url(../../img/Knowlegle.png);
+    background: url(../img/Knowlegle.png);
     background-position-y: -5px !important;
   }
 }
@@ -114,7 +114,7 @@
   margin-bottom: 15px;
   &::before {
     content: "";
-    background: url(../../img/language-1.png);
+    background: url(../img/language-1.png);
   }
 }
 .sidebar-information-left-background-container {
@@ -128,7 +128,7 @@
       font-size: 1rem;
       &::after {
         content: "";
-        background: url(../../img/language.png);
+        background: url(../img/language.png);
         width: 30%;
         height: 15px;
         display: flex;
@@ -147,7 +147,7 @@
   font-weight: 300;
   &::after {
     content: "";
-    background: url(../../img/css_sprites.png);
+    background: url(../img/css_sprites.png);
     width: 30%;
     height: 15px;
     display: flex;
@@ -184,7 +184,7 @@
   justify-content: end;
   &::before {
     content: "";
-    background: url(../../img/facebok.png);
+    background: url(../img/facebok.png);
     width: 1.5vw;
     height: 3vh;
     display: flex;
@@ -199,7 +199,7 @@
   justify-content: end;
   &::before {
     content: "";
-    background: url(../../img/twitter.png);
+    background: url(../img/twitter.png);
     width: 1.5vw;
     height: 3vh;
     display: flex;
@@ -214,7 +214,7 @@
   justify-content: end;
   &::before {
     content: "";
-    background: url(../../img/insagram.png);
+    background: url(../img/insagram.png);
     width: 1.5vw;
     height: 3vh;
     display: flex;

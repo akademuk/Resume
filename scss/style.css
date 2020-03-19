@@ -194,7 +194,7 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(../../img/Shape_13_copy_6.png), #ffc20e;
+  background: url(../img/Shape_13_copy_6.png), #ffc20e;
   height: 95%;
   width: 15%;
   background-repeat: no-repeat;
@@ -208,32 +208,32 @@ h4 {
 
 .email::before {
   content: "";
-  background: url(../../img/email.png);
+  background: url(../img/email.png);
 }
 
 .portfolio::before {
   content: "";
-  background: url(../../img/folder.png);
+  background: url(../img/folder.png);
 }
 
 .birth::before {
   content: "";
-  background: url(../../img/birth.png);
+  background: url(../img/birth.png);
 }
 
 .marritial-status::before {
   content: "";
-  background: url(../../img/marritial.png);
+  background: url(../img/marritial.png);
 }
 
 .address::before {
   content: "";
-  background: url(../../img/address.png);
+  background: url(../img/address.png);
 }
 
 .knowlege::before {
   content: "";
-  background: url(../../img/Knowlegle.png);
+  background: url(../img/Knowlegle.png);
   background-position-y: -5px !important;
 }
 
@@ -243,7 +243,7 @@ h4 {
 
 .languages::before {
   content: "";
-  background: url(../../img/language-1.png);
+  background: url(../img/language-1.png);
 }
 
 .sidebar-information-left-background-container:nth-of-type(1) .languages-name {
@@ -263,7 +263,7 @@ h4 {
 
 .sidebar-information-left-background-container:nth-of-type(1) .languages-name::after {
   content: "";
-  background: url(../../img/language.png);
+  background: url(../img/language.png);
   width: 30%;
   height: 15px;
   display: -webkit-box;
@@ -290,7 +290,7 @@ h4 {
 
 .languages-name-english::after {
   content: "";
-  background: url(../../img/css_sprites.png);
+  background: url(../img/css_sprites.png);
   width: 30%;
   height: 15px;
   display: -webkit-box;
@@ -343,7 +343,7 @@ h4 {
 
 .facebook::before {
   content: "";
-  background: url(../../img/facebok.png);
+  background: url(../img/facebok.png);
   width: 1.5vw;
   height: 3vh;
   display: -webkit-box;
@@ -368,7 +368,7 @@ h4 {
 
 .twitter::before {
   content: "";
-  background: url(../../img/twitter.png);
+  background: url(../img/twitter.png);
   width: 1.5vw;
   height: 3vh;
   display: -webkit-box;
@@ -393,7 +393,7 @@ h4 {
 
 .instagram::before {
   content: "";
-  background: url(../../img/insagram.png);
+  background: url(../img/insagram.png);
   width: 1.5vw;
   height: 3vh;
   display: -webkit-box;
