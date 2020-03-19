@@ -417,6 +417,15 @@ blockquote {
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+  }
+  #box {
+    display: none;
+  }
+}
+
 .information {
   display: -ms-grid;
   display: grid;
@@ -498,20 +507,15 @@ header {
       grid-template-rows: auto 33% 33%;
 }
 
+/*------------About-me-start-------------*/
 .about-me {
   padding: 0 20px;
-}
-
-.expertise {
-  padding: 0 20px;
-  margin-top: 50px;
-  padding-bottom: 20%;
 }
 
 .about-me-tittle {
   color: #ffc20e;
   font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -519,50 +523,49 @@ header {
   font-weight: 600;
 }
 
-.about-me-text {
-  color: #dedede;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-  height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.spoiler {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.spoiler p {
-  color: #dedede;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-}
-
-details {
-  color: #dedede;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-}
-
 .open-text,
 .open-link {
   color: #dedede;
   font-family: "Roboto Slab", serif;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   font-weight: 100;
 }
 
 .open-link:hover {
   color: #dedede;
   font-family: "Roboto Slab", serif;
-  font-size: 1.2vw;
+  font-size: 1rem;
   font-weight: 100;
   text-decoration: none;
+}
+
+/*------------About-me-end-------------*/
+/*------------Main-information-my_work-start-------------*/
+.right-border {
+  position: absolute;
+  border-left: 5px solid #ffc20e;
+  border-top: 5px solid #ffc20e;
+  border-bottom: 5px solid #ffc20e;
+  width: 100%;
+  max-width: 30%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.main-information-my_work-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .show-hide {
@@ -581,20 +584,6 @@ details {
   padding: 0 20px 30px 20px;
 }
 
-.main-information-my_work-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
 .my_work-container {
   width: 49%;
   background: #303030;
@@ -608,19 +597,6 @@ details {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.right-border {
-  position: absolute;
-  border-left: 5px solid #ffc20e;
-  border-top: 5px solid #ffc20e;
-  border-bottom: 5px solid #ffc20e;
-  width: 100%;
-  max-width: 30%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 0;
 }
 
 .my_work-container-quantity {
@@ -642,6 +618,8 @@ details {
   letter-spacing: 2.96px;
 }
 
+/*------------Main-information-my_work-end-------------*/
+/*------------Hobbies-start-------------*/
 .hobbies {
   padding: 0 20px;
 }
@@ -657,6 +635,8 @@ details {
   font-weight: 400;
 }
 
+/*------------Hobbies-end-------------*/
+/*------------Footer-start-------------*/
 footer {
   padding: 0 20px;
   display: -webkit-box;
@@ -671,7 +651,7 @@ footer {
 }
 
 .about_me-link {
-  font-size: 8rem;
+  font-size: 5rem;
   opacity: 0.15;
   font-family: "Heavitas", sans-serif;
   font-weight: 400;
@@ -687,6 +667,35 @@ footer {
   color: #ffc20e;
   -webkit-transition: 1s linear;
   transition: 1s linear;
+}
+
+/*------------Footer-end-------------*/
+@media (max-width: 992px) {
+  .my_work-container-quantity {
+    letter-spacing: inherit;
+  }
+  .right-border {
+    height: 75%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .information {
+    width: 100%;
+  }
+  .my_work-container-quantity {
+    font-size: 2rem;
+  }
+  .right-border {
+    height: 60%;
+  }
+}
+
+.expertise {
+  padding: 0 20px;
+  margin-top: 50px;
+  padding-bottom: 20%;
 }
 
 .skills-bar-container {

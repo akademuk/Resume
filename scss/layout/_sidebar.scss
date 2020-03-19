@@ -234,3 +234,11 @@ blockquote {
   font-size: 2vw;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+  }
+  #box {
+    display: none;
+  }
+}

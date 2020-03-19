@@ -51,98 +51,38 @@ header {
   grid-template-columns: 100%;
   grid-template-rows: auto 33% 33%;
 }
+/*------------About-me-start-------------*/
 .about-me {
   padding: 0 20px;
-}
-.expertise {
-  padding: 0 20px;
-  margin-top: 50px;
-  padding-bottom: 20%;
 }
 .about-me-tittle {
   color: $amber;
   font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: 400;
   span {
     font-weight: 600;
   }
 }
-.about-me-text {
-  color: $gainsboro;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-  height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.spoiler {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  p {
-    color: $gainsboro;
-    font-family: "Roboto Slab", serif;
-    font-size: 1.5vw;
-    font-weight: 100;
-  }
-}
-details {
-  color: $gainsboro;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-}
 .open-text,
 .open-link {
   color: $gainsboro;
   font-family: "Roboto Slab", serif;
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   font-weight: 100;
 }
 .open-link {
   &:hover {
     color: $gainsboro;
     font-family: "Roboto Slab", serif;
-    font-size: 1.2vw;
+    font-size: 1rem;
     font-weight: 100;
     text-decoration: none;
   }
 }
+/*------------About-me-end-------------*/
 
-.show-hide {
-  color: $gainsboro;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-.main-information-my_work {
-  position: relative;
-  z-index: 99;
-  padding: 0 20px 30px 20px;
-}
-.main-information-my_work-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-.my_work-container {
-  width: 49%;
-  background: #303030;
-  padding: 30px 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+/*------------Main-information-my_work-start-------------*/
 .right-border {
   position: absolute;
   border-left: 5px solid $amber;
@@ -154,6 +94,37 @@ details {
   top: 0;
   right: 0;
   z-index: 0;
+}
+.main-information-my_work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.show-hide {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5vw;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.main-information-my_work {
+  position: relative;
+  z-index: 99;
+  padding: 0 20px 30px 20px;
+}
+.my_work-container {
+  width: 49%;
+  background: #303030;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .my_work-container-quantity {
   opacity: 0.5;
@@ -172,6 +143,9 @@ details {
   font-weight: 400;
   letter-spacing: 2.96px;
 }
+/*------------Main-information-my_work-end-------------*/
+
+/*------------Hobbies-start-------------*/
 .hobbies {
   padding: 0 20px;
 }
@@ -180,11 +154,13 @@ details {
   font-family: "Roboto Slab", serif;
   font-size: 2vw;
   font-weight: 100;
-
   span {
     font-weight: 400;
   }
 }
+/*------------Hobbies-end-------------*/
+
+/*------------Footer-start-------------*/
 footer {
   padding: 0 20px;
   display: flex;
@@ -192,7 +168,7 @@ footer {
   justify-content: center;
 }
 .about_me-link {
-  font-size: 8rem;
+  font-size: 5rem;
   opacity: 0.15;
   font-family: $font-family-Heavitas;
   font-weight: 400;
@@ -204,5 +180,27 @@ footer {
     opacity: 0.5;
     color: $amber;
     transition: 1s linear;
+  }
+}
+/*------------Footer-end-------------*/
+
+@media (max-width: 992px) {
+  .my_work-container-quantity {
+    letter-spacing: inherit;
+  }
+  .right-border {
+    height: 75%;
+    top: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .information {
+    width: 100%;
+  }
+  .my_work-container-quantity {
+    font-size: 2rem;
+  }
+  .right-border {
+    height: 60%;
   }
 }
