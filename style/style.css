@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Heavitas";
+  src: url(../../fonts/Heavitas.woff) format("woff"), url(../../fonts/Heavitas.ttf) format("true-type"), url(../../fonts/Heavitas.eot) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans100";
+  src: url(../../fonts/MuseoSans100.woff) format("woff"), url(../../fonts/MuseoSans100.ttf) format("true-type"), url(../../fonts/MuseoSans100.eot) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: red;
+}
+
+main {
+  max-width: 1366px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 23px 0px white;
+          box-shadow: 0px 0px 23px 0px white;
+}
+
+/*---------- MAIN --- НАЧАЛО ----------*/
+/*---------- MAIN --- КОНЕЦ ----------*/
+/*# sourceMappingURL=style.css.map */

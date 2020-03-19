@@ -1,0 +1,236 @@
+.sidebar {
+  width: 30%;
+}
+.myfoto {
+  position: relative;
+  background: $nero;
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: 50%;
+    border-radius: 0px 0px 40px 0px;
+    background: $nero;
+  }
+  .background {
+    background: rgba(231, 175, 12, 0.5);
+    border-radius: 0px 0px 40px 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.position {
+  font-family: "Roboto Slab", serif;
+  font-size: 2vw;
+  color: $rawUmber;
+  font-weight: 300;
+  padding-bottom: 25px;
+  margin-bottom: 0;
+}
+.name-position {
+  padding: 20px 40px 40px 20px;
+  background: $amber;
+  border-radius: 0px 40px 0px 0px;
+  margin-bottom: -1px;
+  hr {
+    background: rgba(40, 40, 40, 0.2);
+    width: 100%;
+    height: 1px;
+    border: none;
+    &:after {
+      content: "";
+      width: 15%;
+      height: 1px;
+      display: block;
+      background: $nero;
+    }
+  }
+}
+.sidebar-information {
+  background: $amber !important;
+  padding-right: 40px;
+  aside {
+    display: flex;
+  }
+}
+.sidebar-information-left-background {
+  display: flex;
+  height: 125px;
+  &:before {
+    content: "";
+    display: flex;
+    background: url(../../img/Shape_13_copy_6.png), rgba(255, 194, 14, 1);
+    height: 95%;
+    width: 15%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 8%;
+  }
+}
+.sidebar-information-left-background-container {
+  width: 100%;
+}
+
+.email {
+  &::before {
+    content: "";
+    background: url(../../img/email.png);
+  }
+}
+.portfolio {
+  &::before {
+    content: "";
+    background: url(../../img/folder.png);
+  }
+}
+.birth {
+  &::before {
+    content: "";
+    background: url(../../img/birth.png);
+  }
+}
+.marritial-status {
+  &::before {
+    content: "";
+    background: url(../../img/marritial.png);
+  }
+}
+.address {
+  &::before {
+    content: "";
+    background: url(../../img/address.png);
+  }
+}
+.knowlege {
+  &::before {
+    content: "";
+    background: url(../../img/Knowlegle.png);
+    background-position-y: -5px !important;
+  }
+}
+.languages {
+  margin-bottom: 15px;
+  &::before {
+    content: "";
+    background: url(../../img/language-1.png);
+  }
+}
+.sidebar-information-left-background-container {
+  &:nth-of-type(1) {
+    .languages-name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Roboto Slab", serif;
+      font-weight: 300;
+      font-size: 1rem;
+      &::after {
+        content: "";
+        background: url(../../img/language.png);
+        width: 30%;
+        height: 15px;
+        display: flex;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+.languages-name-english {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  &::after {
+    content: "";
+    background: url(../../img/css_sprites.png);
+    width: 30%;
+    height: 15px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.languages-padding {
+  padding-bottom: 10px !important;
+}
+.knowlege-height-container {
+  height: 220px !important;
+}
+.languages-height-container {
+  height: 150px !important;
+}
+.social {
+  margin-top: 50px;
+  padding: 0 20px 50px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.social {
+  a {
+    color: $rawUmber;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1vw;
+    font-weight: 300;
+  }
+}
+.facebook {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../../img/facebok.png);
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 7px;
+  }
+}
+.twitter {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../../img/twitter.png);
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 7px;
+  }
+}
+.instagram {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../../img/insagram.png);
+    width: 1.5vw;
+    height: 3vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 7px;
+  }
+}
+.blockquote-container {
+  padding: 0 20px 50px 20px;
+  width: 85%;
+  margin: 0 auto;
+}
+blockquote {
+  color: $rawUmber;
+  font-family: $font-family-MuseoSans100;
+  font-size: 2vw;
+  font-weight: 400;
+}

@@ -1,0 +1,257 @@
+.information {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 75% 15%;
+}
+header {
+  color: white !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+  p {
+    font-size: 2vw;
+    opacity: 0.15;
+    font-family: $font-family-Heavitas;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.9em;
+    text-align: justify;
+    text-align-last: justify;
+    margin: 0;
+  }
+}
+.container-text {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  &:nth-of-type(2) {
+    height: 50%;
+  }
+  p {
+    margin-right: 10px;
+    text-align: justify;
+  }
+}
+.js-frameforks,
+.sass-jquery,
+.svg-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  p {
+    font-size: 0.8vw;
+  }
+}
+
+.responcive {
+  font-size: 5vw;
+}
+
+.main-information {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 33% 33%;
+}
+.about-me {
+  padding: 0 20px;
+}
+.expertise {
+  padding: 0 20px;
+  margin-top: 50px;
+  padding-bottom: 20%;
+}
+.about-me-tittle {
+  color: $amber;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5vw;
+  font-weight: 400;
+  span {
+    font-weight: 600;
+  }
+}
+.about-me-text {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5vw;
+  font-weight: 100;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.spoiler {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  p {
+    color: $gainsboro;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5vw;
+    font-weight: 100;
+  }
+}
+details {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5vw;
+  font-weight: 100;
+}
+.open-text,
+.open-link {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2vw;
+  font-weight: 100;
+}
+.open-link {
+  &:hover {
+    color: $gainsboro;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.2vw;
+    font-weight: 100;
+    text-decoration: none;
+  }
+}
+
+.show-hide {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5vw;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.main-information-my_work {
+  position: relative;
+  z-index: 99;
+  padding: 0 20px 30px 20px;
+}
+.main-information-my_work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.my_work-container {
+  width: 49%;
+  background: #303030;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.right-border {
+  position: absolute;
+  border-left: 5px solid $amber;
+  border-top: 5px solid $amber;
+  border-bottom: 5px solid $amber;
+  width: 100%;
+  max-width: 30%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+.my_work-container-quantity {
+  opacity: 0.5;
+  color: $amber;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 100;
+  font-size: 3.5vw;
+  margin-right: 20px;
+  letter-spacing: -3.13px;
+}
+.my_work-container-text {
+  opacity: 0.9;
+  color: $gainsboro;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  letter-spacing: 2.96px;
+}
+.hobbies {
+  padding: 0 20px;
+}
+.hobbies-text {
+  color: $amber;
+  font-family: "Roboto Slab", serif;
+  font-size: 2vw;
+  font-weight: 100;
+
+  span {
+    font-weight: 400;
+  }
+}
+footer {
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.about_me-link {
+  font-size: 8rem;
+  opacity: 0.15;
+  font-family: $font-family-Heavitas;
+  font-weight: 400;
+  color: $charcoal;
+  text-transform: uppercase;
+  transition: 1s linear;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+    color: $amber;
+    transition: 1s linear;
+  }
+}
+.container-text {
+  img {
+    object-fit: fill;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+.svg-container {
+  img {
+    object-fit: fill;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+.container-text {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-rows: 24% 24% 24% 24% 24%;
+  justify-content: space-between;
+  img {
+    &:nth-of-type(4) {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      width: 100%;
+    }
+    &:nth-of-type(5) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: 100%;
+    }
+  }
+}
+.text-container-img {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  justify-items: center;
+  img {
+    object-fit: scale-down;
+  }
+}

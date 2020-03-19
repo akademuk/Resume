@@ -1,0 +1,77 @@
+body {
+  background: $nero;
+  color: $nero;
+  font-weight: 400;
+  font-size: 1vh;
+}
+main {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+}
+.information {
+  width: 70%;
+  background: $nero;
+}
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 3vw;
+  margin-bottom: 0;
+  color: $nero;
+}
+h2 {
+  color: $white;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.3vw;
+  margin-bottom: 0;
+  color: $rawUmber04;
+  display: flex;
+  font-weight: 300;
+  align-items: flex-start;
+  text-transform: uppercase;
+  margin-top: -10px;
+  &::before {
+    content: "";
+    display: flex;
+    background: url(../../img/phone.png);
+    opacity: 0.5;
+    width: 10%;
+    height: 35px;
+    margin-right: 5%;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: top !important;
+  }
+}
+h4 {
+  color: $gainsboro;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 100;
+  font-size: 1vw;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+.link-information {
+  font-size: 1.1vw;
+  margin-left: 15%;
+  color: $black;
+  font-weight: 300;
+  &:hover {
+    text-decoration: none !important;
+    color: $rawUmber04;
+  }
+}
+@media (min-width: 1366px) {
+  main {
+    box-shadow: 0px 0px 23px 0px rgba(255, 255, 255, 1);
+  }
+}

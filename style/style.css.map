@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": ";AEAA,UAAU;EACR,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,8BAA8B,CAAC,cAAc,EAChD,6BAA6B,CAAC,mBAAmB,EACjD,6BAA6B,CAAC,kBAAkB;EAClD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;;;AAGpB,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,kCAAkC,CAAC,cAAc,EACpD,iCAAiC,CAAC,mBAAmB,EACrD,iCAAiC,CAAC,kBAAkB;EACtD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;;;AEfpB,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,GAAG;CAChB;;AACD,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,UAAU;EACtB,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,GAAG,CAAC,KAAsB;CACpD;;AERD,yCAAyC;AAGzC,wCAAwC",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/base/_index.scss",
+        "../scss/base/_fonts.scss",
+        "../scss/base/_vars.scss",
+        "../scss/base/_base.scss",
+        "../scss/layout/_index.scss",
+        "../scss/layout/_main.scss",
+        "../scss/modules/_index.scss",
+        "../scss/modules/_about.scss",
+        "../scss/modules/_expertise.scss",
+        "../scss/modules/_hobbies.scss",
+        "../scss/modules/_stats.scss",
+        "../scss/modules/_typo.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
