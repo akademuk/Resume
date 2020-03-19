@@ -1,7 +1,6 @@
 .expertise {
   padding: 0 20px;
   margin-top: 50px;
-  padding-bottom: 20%;
 }
 .skills-bar-container {
   position: relative;
@@ -273,5 +272,16 @@
   }
   100% {
     width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .skills-bar-container {
+    li {
+      width: 45%;
+      margin-bottom: 0;
+    }
+  }
+  .percent {
+    font-size: 1.5rem !important;
   }
 }
