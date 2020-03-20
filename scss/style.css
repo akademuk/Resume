@@ -124,6 +124,7 @@ h4 {
 /*---------- MAIN --- КОНЕЦ ----------*/
 .sidebar {
   width: 30%;
+  height: 100%;
 }
 
 .myfoto {
@@ -735,7 +736,8 @@ footer {
 
 .expertise {
   padding: 0 20px;
-  margin-top: 50px;
+  margin-top: 20px;
+  height: 100%;
 }
 
 .skills-bar-container {
