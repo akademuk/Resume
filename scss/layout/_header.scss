@@ -7,6 +7,7 @@
 header {
   padding: 0 20px;
   height: 100%;
+  min-height: 150px;
 }
 .container-text {
   width: 100%;
@@ -54,6 +55,7 @@ header {
 /*------------About-me-start-------------*/
 .about-me {
   padding: 0 20px;
+  height: auto;
 }
 .about-me-tittle {
   color: $amber;
@@ -196,7 +198,7 @@ footer {
 @media (max-width: 768px) {
   .information {
     width: 100%;
-    grid-template-rows: 5% 55% 10%;
+    grid-template-rows: auto auto auto;
   }
   .my_work-container-quantity {
     font-size: 2rem;

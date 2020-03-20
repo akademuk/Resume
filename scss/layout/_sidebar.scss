@@ -245,4 +245,9 @@ blockquote {
   .myfoto {
     width: 130%;
   }
+  .my-information {
+    width: 130%;
+    position: absolute;
+    z-index: 999;
+  }
 }
