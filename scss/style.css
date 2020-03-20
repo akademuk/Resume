@@ -530,6 +530,7 @@ header {
 .about-me {
   padding: 0 20px;
   height: auto;
+  margin: 0 !important;
 }
 
 .about-me-tittle {
