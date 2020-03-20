@@ -11,6 +11,10 @@ main {
   box-sizing: border-box;
   display: flex;
 }
+.fa {
+  font-family: $font-famely-FontAwesome;
+  font-size: 1.5rem !important;
+}
 .information {
   width: 70%;
   background: $nero;
