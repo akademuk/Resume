@@ -740,6 +740,16 @@ footer {
   .about_me-link {
     font-size: 2rem;
   }
+  .container-text img {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .text-container-img img {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .expertise {

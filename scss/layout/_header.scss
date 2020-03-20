@@ -231,4 +231,16 @@ footer {
   .about_me-link {
     font-size: 2rem;
   }
+  .container-text {
+    img {
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  .text-container-img {
+    img {
+      height: auto;
+      object-fit: contain;
+    }
+  }
 }
