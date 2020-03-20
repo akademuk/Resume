@@ -704,8 +704,8 @@ footer {
 @media (max-width: 768px) {
   .information {
     width: 100%;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
+    -ms-grid-rows: 100px auto auto;
+        grid-template-rows: 100px auto auto;
   }
   .my_work-container-quantity {
     font-size: 2rem;
