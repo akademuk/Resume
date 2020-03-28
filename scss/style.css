@@ -1238,8 +1238,8 @@ footer {
     display: none;
   }
   .information {
-    -ms-grid-rows: 18% auto 5%;
-        grid-template-rows: 18% auto 5%;
+    -ms-grid-rows: 300px auto 5%;
+        grid-template-rows: 300px auto 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
