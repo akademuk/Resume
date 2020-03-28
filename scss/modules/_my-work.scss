@@ -71,3 +71,22 @@
     height: 100%;
   }
 }
+@media (max-width: 568px) {
+  .main-information-my_work {
+    padding: 0 10px;
+  }
+  .my_work-container-quantity {
+    font-size: 2rem;
+  }
+  .my_work-container-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .main-information-my_work-container {
+    flex-direction: column;
+  }
+  .my_work-container {
+    width: 100%;
+  }
+}

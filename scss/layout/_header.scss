@@ -67,11 +67,6 @@ header {
 }
 @media (max-width: 568px) {
   header {
-    height: auto;
-  }
-}
-@media (max-width: 320px) {
-  header {
     display: none;
   }
   .information {

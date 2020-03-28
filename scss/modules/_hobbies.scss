@@ -10,3 +10,11 @@
     font-weight: 400;
   }
 }
+@media (max-width: 568px) {
+  .hobbies {
+    padding: 0 10px;
+  }
+  .hobbies-text {
+    font-size: 1rem;
+  }
+}

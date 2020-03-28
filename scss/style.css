@@ -306,12 +306,6 @@ header {
 
 @media (max-width: 568px) {
   header {
-    height: auto;
-  }
-}
-
-@media (max-width: 320px) {
-  header {
     display: none;
   }
   .information {
@@ -602,6 +596,12 @@ footer {
 }
 
 /*------------Footer-end-------------*/
+@media (max-width: 320px) {
+  .about_me-link {
+    font-size: 3rem;
+  }
+}
+
 .about-me {
   padding: 0 50px;
 }
@@ -644,7 +644,7 @@ footer {
   .about-me {
     margin: 0 0 0 7%;
     padding-right: 10px;
-    height: 350px;
+    height: 100%;
   }
   .about-me-tittle {
     font-size: 1rem;
@@ -922,13 +922,22 @@ footer {
   .expertise {
     text-align: center;
     padding: 0 10px;
-    margin-top: 30%;
+    margin-top: 10%;
   }
   .percent {
     font-size: 2rem !important;
   }
   h4 {
     font-size: 0.7rem;
+  }
+  .skills-bar-container li {
+    width: 33% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .skills-bar-container li {
+    width: 50% !important;
   }
 }
 
@@ -945,6 +954,15 @@ footer {
 
 .hobbies-text span {
   font-weight: 400;
+}
+
+@media (max-width: 568px) {
+  .hobbies {
+    padding: 0 10px;
+  }
+  .hobbies-text {
+    font-size: 1rem;
+  }
 }
 
 .right-border {
@@ -1038,6 +1056,30 @@ footer {
   }
   .right-border {
     height: 100%;
+  }
+}
+
+@media (max-width: 568px) {
+  .main-information-my_work {
+    padding: 0 10px;
+  }
+  .my_work-container-quantity {
+    font-size: 2rem;
+  }
+  .my_work-container-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-information-my_work-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my_work-container {
+    width: 100%;
   }
 }
 
