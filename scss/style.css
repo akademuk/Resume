@@ -283,10 +283,10 @@ header {
 @media (max-width: 768px) {
   header {
     height: 300px;
-    max-height: 100%;
   }
   .container-text {
     height: inherit;
+    max-height: 300px;
   }
 }
 
