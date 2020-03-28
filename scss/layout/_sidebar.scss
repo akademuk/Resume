@@ -1,8 +1,4 @@
 .sidebar {
-  width: 30%;
-  height: 100%;
-}
-.sidebar {
   .container {
     display: none;
   }
@@ -29,7 +25,7 @@
 }
 .position {
   font-family: "Roboto Slab", serif;
-  font-size: 2vw;
+  font-size: 2rem;
   color: $rawUmber;
   font-weight: 300;
   padding-bottom: 25px;
@@ -56,14 +52,17 @@
 }
 .sidebar-information {
   background: $amber !important;
-  padding-right: 40px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-rows: 125px 125px 150px 125px 150px 200px 280px 150px;
+  grid-template-columns: 100%;
   aside {
     display: flex;
   }
 }
 .sidebar-information-left-background {
   display: flex;
-  height: 125px;
+  height: auto;
   &:before {
     content: "";
     display: flex;
@@ -98,6 +97,7 @@
   }
 }
 .marritial-status {
+  font-size: 1.7rem !important;
   &::before {
     content: "";
     background: url(../img/marritial.png);
@@ -164,12 +164,7 @@
 .languages-padding {
   padding-bottom: 10px !important;
 }
-.knowlege-height-container {
-  height: 220px !important;
-}
-.languages-height-container {
-  height: 150px !important;
-}
+
 .social {
   margin-top: 50px;
   padding: 0 20px 50px 20px;
@@ -180,8 +175,11 @@
   a {
     color: $rawUmber;
     font-family: "Roboto Slab", sans-serif;
-    font-size: 1vw;
+    font-size: 1rem;
     font-weight: 300;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 .facebook {
@@ -196,7 +194,7 @@
     display: flex;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 7px;
+    margin-right: 5px;
   }
 }
 .twitter {
@@ -211,7 +209,7 @@
     display: flex;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 7px;
+    margin-right: 5px;
   }
 }
 .instagram {
@@ -226,7 +224,7 @@
     display: flex;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 7px;
+    margin-right: 5px;
   }
 }
 .blockquote-container {
@@ -237,7 +235,7 @@
 blockquote {
   color: $rawUmber;
   font-family: $font-family-MuseoSans100;
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 400;
 }
 @media (max-width: 768px) {

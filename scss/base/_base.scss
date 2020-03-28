@@ -4,25 +4,22 @@ body {
   font-weight: 400;
   font-size: 1vh;
 }
-main {
-  max-width: 1366px;
+html,
+body {
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  display: flex;
 }
 .fa {
   font-family: $font-famely-FontAwesome;
   font-size: 1.5rem !important;
 }
 .information {
-  width: 70%;
   background: $nero;
 }
 h1 {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 3rem;
   margin-bottom: 0;
   color: $nero;
 }
@@ -35,21 +32,21 @@ h2 {
 }
 h3 {
   font-family: "Roboto Slab", serif;
-  font-size: 1.3vw;
+  font-size: calc(1.5rem + 0.2vw);
   margin-bottom: 0;
   color: $rawUmber04;
   display: flex;
   font-weight: 300;
-  align-items: flex-start;
+  align-items: flex-end;
   text-transform: uppercase;
-  margin-top: -10px;
+  margin-top: -6%;
   &::before {
     content: "";
     display: flex;
     background: url(../../img/phone.png);
     opacity: 0.5;
     width: 10%;
-    height: 35px;
+    height: calc(1.7rem + 0.2vw);
     margin-right: 5%;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -65,8 +62,8 @@ h4 {
   padding-top: 20px;
 }
 .link-information {
-  font-size: 1.1vw;
-  margin-left: 15%;
+  font-size: calc(1.5rem - 0.1vw);
+  word-break: break-all;
   color: $black;
   font-weight: 300;
   &:hover {
