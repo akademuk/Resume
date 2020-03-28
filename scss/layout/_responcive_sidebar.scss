@@ -219,6 +219,11 @@
     }
   }
   .main-information {
-    margin-top: 100px;
+    margin-top: 15%;
+  }
+  .skills-bar-container {
+    li {
+      width: 50% !important;
+    }
   }
 }
