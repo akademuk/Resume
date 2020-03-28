@@ -61,8 +61,7 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .container-text {
-    height: 300px;
-    max-height: 300px;
+  header {
+    height: 100%;
   }
 }
