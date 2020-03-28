@@ -1,0 +1,222 @@
+.sidebar-information {
+  background: $amber !important;
+  padding-right: 20px;
+  display: grid;
+  grid-template-rows: 125px 125px 150px 125px 150px 200px 280px 150px;
+  grid-template-columns: 100%;
+  aside {
+    display: flex;
+  }
+}
+.sidebar-information-left-background {
+  display: flex;
+  height: auto;
+  &:before {
+    content: "";
+    display: flex;
+    background: url(../img/Shape_13_copy_6.png), rgba(255, 194, 14, 1);
+    height: 95%;
+    width: 15%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 8%;
+  }
+}
+.sidebar-information-left-background-container {
+  width: 100%;
+}
+
+.email {
+  &::before {
+    content: "";
+    background: url(../img/email.png);
+  }
+}
+.portfolio {
+  &::before {
+    content: "";
+    background: url(../img/folder.png);
+  }
+}
+.birth {
+  &::before {
+    content: "";
+    background: url(../img/birth.png);
+  }
+}
+.marritial-status {
+  &::before {
+    content: "";
+    background: url(../img/marritial.png);
+  }
+}
+.address {
+  &::before {
+    content: "";
+    background: url(../img/address.png);
+  }
+}
+.knowlege {
+  &::before {
+    content: "";
+    background: url(../img/Knowlegle.png);
+    background-position-y: -5px !important;
+  }
+}
+.languages {
+  margin-bottom: 15px;
+  &::before {
+    content: "";
+    background: url(../img/language-1.png);
+  }
+}
+.sidebar-information-left-background-container {
+  &:nth-of-type(1) {
+    .languages-name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "Roboto Slab", serif;
+      font-weight: 300;
+      font-size: 1rem;
+      &::after {
+        content: "";
+        background: url(../img/language.png);
+        width: 30%;
+        height: 15px;
+        display: flex;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+.languages-name-english {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  &::after {
+    content: "";
+    background: url(../img/css_sprites.png);
+    width: 30%;
+    height: 15px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.languages-padding {
+  padding-bottom: 10px !important;
+}
+
+.social {
+  margin-top: 50px;
+  padding: 0 20px 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.social {
+  a {
+    color: $rawUmber;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    align-items: center;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.facebook {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../img/facebok.png);
+    width: 1.5vw;
+    height: 1vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+}
+.twitter {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../img/twitter.png);
+    width: 1.5vw;
+    height: 1vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+}
+.instagram {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  &::before {
+    content: "";
+    background: url(../img/insagram.png);
+    width: 1.5vw;
+    height: 1vh;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+  }
+}
+.blockquote-container {
+  padding: 0 20px 50px 20px;
+  width: 85%;
+  margin: 0 auto;
+  color: $rawUmber;
+  font-family: $font-family-MuseoSans100;
+  font-size: 2rem;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  h3 {
+    font-size: 1.2rem;
+    align-items: center;
+    &:before {
+      height: 17px;
+    }
+  }
+  .link-information {
+    font-size: 1rem;
+  }
+  .sidebar-information {
+    grid-template-rows: 100px 100px 100px 100px 100px 150px 200px 125px;
+    border-radius: 0 0 40px 0;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .position {
+    font-size: 1.5rem !important;
+  }
+  .name-position {
+    padding-right: 10px;
+  }
+  .sidebar {
+    .container {
+      display: block;
+    }
+    .my-information {
+      display: none;
+    }
+  }
+}

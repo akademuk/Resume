@@ -78,7 +78,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 60px;
   text-align: center;
   line-height: 70px;
   -moz-transition: all 0.3s;
@@ -96,8 +96,8 @@
 .container-header .menu-item .menu-text {
   position: absolute;
   top: 0;
-  left: -170px;
-  height: 50px;
+  left: -300px;
+  height: 60px;
   width: 170px;
   background: $amber;
   font-size: 0.8rem;
@@ -170,4 +170,42 @@
   right: 20px;
   z-index: 3;
   fill: #fff;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    width: 50%;
+  }
+  .sidebar {
+    .container {
+      width: 60%;
+    }
+  }
+  .container-header {
+    .menu-item {
+      &:hover {
+        .menu-text {
+          font-size: 1.5rem;
+          left: 100% !important;
+          width: 80vw !important;
+        }
+      }
+    }
+  }
+  .menu-text-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .position {
+      padding: 0;
+      display: flex;
+      &:before {
+        content: "/";
+        font-size: 2rem;
+        margin: 0 10px;
+        display: flex;
+        color: #5b4504;
+      }
+    }
+  }
 }

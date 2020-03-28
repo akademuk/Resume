@@ -1,0 +1,22 @@
+/*------------Footer-start-------------*/
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.about_me-link {
+  font-size: calc(5rem + 0.5vw);
+  opacity: 0.15;
+  font-family: $font-family-Heavitas;
+  font-weight: 400;
+  color: $charcoal;
+  text-transform: uppercase;
+  transition: 1s linear;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.5;
+    color: $amber;
+    transition: 1s linear;
+  }
+}
+/*------------Footer-end-------------*/

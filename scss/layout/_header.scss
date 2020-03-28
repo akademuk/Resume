@@ -1,12 +1,11 @@
 .information {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto;
+  grid-template-rows: 10% auto 5%;
 }
 /*------------Header-start-------------*/
 header {
-  padding: 0 20px;
-  height: 30vh;
+  height: 200px;
 }
 .container-text {
   width: 100%;
@@ -47,147 +46,10 @@ header {
 }
 /*------------Header-end-------------*/
 .main-information {
-  padding: 20px 0;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
 }
-/*------------About-me-start-------------*/
-.about-me {
-  padding: 0 20px;
-}
-.about-me-tittle {
-  color: $amber;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  span {
-    font-weight: 600;
-  }
-}
-.open-text,
-.open-link {
-  color: $gainsboro;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.2rem;
-  font-weight: 100;
-}
-.open-link {
-  &:hover {
-    color: $gainsboro;
-    font-family: "Roboto Slab", serif;
-    font-size: 1.2rem;
-    font-weight: 100;
-    text-decoration: none;
-  }
-}
-/*------------About-me-end-------------*/
-
-/*------------Main-information-my_work-start-------------*/
-.main-information-my_work {
-  margin-top: 10%;
-}
-.right-border {
-  position: absolute;
-  border-left: 5px solid $amber;
-  border-top: 5px solid $amber;
-  border-bottom: 5px solid $amber;
-  width: 100%;
-  max-width: 30%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 0;
-}
-.main-information-my_work-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-.show-hide {
-  color: $gainsboro;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5vw;
-  font-weight: 100;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-.main-information-my_work {
-  position: relative;
-  z-index: 99;
-  padding: 0 20px 30px 20px;
-}
-.my_work-container {
-  width: 49%;
-  background: #303030;
-  padding: 30px 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.my_work-container-quantity {
-  opacity: 0.5;
-  color: $amber;
-  font-family: "Roboto Slab", sans-serif;
-  font-weight: 100;
-  font-size: 3.5vw;
-  margin-right: 20px;
-  letter-spacing: -3.13px;
-}
-.my_work-container-text {
-  opacity: 0.9;
-  color: $gainsboro;
-  font-family: "Roboto Slab", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 2.96px;
-}
-/*------------Main-information-my_work-end-------------*/
-
-/*------------Hobbies-start-------------*/
-.hobbies {
-  padding: 0 20px;
-  margin-top: 5%;
-}
-.hobbies-text {
-  color: $amber;
-  font-family: "Roboto Slab", serif;
-  font-size: 2rem;
-  font-weight: 100;
-  span {
-    font-weight: 400;
-  }
-}
-/*------------Hobbies-end-------------*/
-
-/*------------Footer-start-------------*/
-footer {
-  padding: 0 20px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-.about_me-link {
-  font-size: 5rem;
-  opacity: 0.15;
-  font-family: $font-family-Heavitas;
-  font-weight: 400;
-  color: $charcoal;
-  text-transform: uppercase;
-  transition: 1s linear;
-  &:hover {
-    text-decoration: none;
-    opacity: 0.5;
-    color: $amber;
-    transition: 1s linear;
-  }
-}
-/*------------Footer-end-------------*/
 
 @media (max-width: 992px) {
   .my_work-container-quantity {
@@ -199,53 +61,7 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  .information {
-    width: 100%;
-    grid-template-rows: 100px auto auto;
-  }
-  .my_work-container-quantity {
-    font-size: 2rem;
-  }
-  .right-border {
-    height: 60%;
-  }
   header {
-    padding: 0;
-  }
-  .about-me-tittle {
-    font-size: 1rem;
-  }
-  .open-text,
-  .open-link {
-    font-size: 1rem;
-  }
-  .my_work-container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .my_work-container-text {
-    font-size: 0.5rem;
-  }
-  .right-border {
-    height: 90%;
-    top: 0;
-  }
-  .about_me-link {
-    font-size: 2rem;
-  }
-  .container-text {
-    img {
-      height: 100%;
-      object-fit: fill;
-    }
-  }
-  .text-container-img {
-    img {
-      height: auto;
-      object-fit: contain;
-    }
-  }
-  .about-me {
-    margin-left: 10% !important;
+    height: 300px;
   }
 }

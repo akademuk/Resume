@@ -8,3 +8,8 @@ main {
   grid-template-rows: 100%;
 }
 /*---------- MAIN --- КОНЕЦ ----------*/
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 100%;
+  }
+}

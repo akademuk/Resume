@@ -1,7 +1,8 @@
 body {
   background: $nero;
+  font-family: "Roboto Slab", serif;
   color: $nero;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1vh;
 }
 html,
@@ -17,7 +18,6 @@ body {
   background: $nero;
 }
 h1 {
-  font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-size: 3rem;
   margin-bottom: 0;
@@ -25,18 +25,14 @@ h1 {
 }
 h2 {
   color: $white;
-  font-family: "Roboto Slab", serif;
   font-size: 2rem;
-  font-weight: 300;
   text-transform: uppercase;
 }
 h3 {
-  font-family: "Roboto Slab", serif;
-  font-size: calc(1.5rem + 0.2vw);
+  font-size: calc(1.5rem + 0.1vw);
   margin-bottom: 0;
   color: $rawUmber04;
   display: flex;
-  font-weight: 300;
   align-items: flex-end;
   text-transform: uppercase;
   margin-top: -6%;
@@ -55,7 +51,6 @@ h3 {
 }
 h4 {
   color: $gainsboro;
-  font-family: "Roboto Slab", sans-serif;
   font-weight: 100;
   font-size: 1vw;
   text-transform: uppercase;
@@ -65,7 +60,6 @@ h4 {
   font-size: calc(1.5rem - 0.1vw);
   word-break: break-all;
   color: $black;
-  font-weight: 300;
   &:hover {
     text-decoration: none !important;
     color: $rawUmber04;
@@ -74,19 +68,5 @@ h4 {
 @media (min-width: 1366px) {
   main {
     box-shadow: 0px 0px 23px 0px rgba(255, 255, 255, 1);
-  }
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
-  h3 {
-    font-size: 0.7rem;
-  }
-  h4 {
-    font-size: 0.7rem;
   }
 }
