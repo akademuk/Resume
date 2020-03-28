@@ -282,7 +282,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    height: auto;
+    height: 300px;
     max-height: 100%;
   }
 }
