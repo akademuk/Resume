@@ -1241,8 +1241,8 @@ footer {
     display: none;
   }
   .information {
-    -ms-grid-rows: 300px auto 5%;
-        grid-template-rows: 300px auto 5%;
+    -ms-grid-rows: 13% auto 5%;
+        grid-template-rows: 13% auto 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
