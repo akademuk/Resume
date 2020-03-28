@@ -209,3 +209,16 @@
     }
   }
 }
+@media (max-width: 568px) {
+  .myfoto {
+    width: 75vw !important;
+    height: 50vw;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .main-information {
+    margin-top: 100px;
+  }
+}

@@ -48,3 +48,14 @@
     }
   }
 }
+@media (max-width: 568px) {
+  .sidebar {
+    width: 60px !important;
+    .container {
+      width: 60px !important;
+      .container-header {
+        width: 100% !important;
+      }
+    }
+  }
+}

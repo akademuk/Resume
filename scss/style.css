@@ -111,6 +111,12 @@ h4 {
   }
 }
 
+@media (max-width: 992px) {
+  h4 {
+    font-size: 1rem;
+  }
+}
+
 /*---------- MAIN --- НАЧАЛО ----------*/
 main {
   max-width: 1366px;
@@ -186,6 +192,18 @@ main {
   height: 1px;
   display: block;
   background: #282828;
+}
+
+@media (max-width: 568px) {
+  .sidebar {
+    width: 60px !important;
+  }
+  .sidebar .container {
+    width: 60px !important;
+  }
+  .sidebar .container .container-header {
+    width: 100% !important;
+  }
 }
 
 .information {
@@ -282,11 +300,13 @@ header {
 
 @media (max-width: 768px) {
   header {
-    height: 100%;
-    max-height: 300px;
+    height: 250px;
   }
-  .container-text {
-    height: 300px;
+}
+
+@media (max-width: 568px) {
+  header {
+    height: 50vw;
   }
 }
 
@@ -521,6 +541,20 @@ header {
   }
 }
 
+@media (max-width: 568px) {
+  .myfoto {
+    width: 75vw !important;
+    height: 50vw;
+  }
+  .myfoto img {
+    height: 100%;
+    width: 100%;
+  }
+  .main-information {
+    margin-top: 100px;
+  }
+}
+
 /*------------Footer-start-------------*/
 footer {
   display: -webkit-box;
@@ -589,6 +623,24 @@ footer {
 @media (max-width: 768px) {
   .about-me {
     margin: 0 0 0 13%;
+  }
+}
+
+@media (max-width: 568px) {
+  .about-me {
+    margin: 0 0 0 7%;
+    padding-right: 10px;
+    height: 350px;
+  }
+  .about-me-tittle {
+    font-size: 1rem;
+  }
+  .open-text,
+  .open-link {
+    font-size: 0.8rem;
+  }
+  .main-information {
+    width: 100%;
   }
 }
 
@@ -842,6 +894,26 @@ footer {
 @media (max-width: 768px) {
   .expertise {
     margin-top: 20px;
+    text-align: center;
+  }
+  .progressbar {
+    margin-left: -50% !important;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .expertise {
+    text-align: center;
+    padding: 0 10px;
+  }
+  .percent {
+    font-size: 2rem !important;
+  }
+  h4 {
+    font-size: 0.7rem;
   }
 }
 
@@ -1241,8 +1313,18 @@ footer {
     display: none;
   }
   .information {
-    -ms-grid-rows: 300px auto 5%;
-        grid-template-rows: 300px auto 5%;
+    -ms-grid-rows: 250px auto 5%;
+        grid-template-rows: 250px auto 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .information {
+    -ms-grid-rows: 120px auto 5%;
+        grid-template-rows: 120px auto 5%;
+  }
+  .myfoto {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

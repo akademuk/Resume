@@ -275,5 +275,24 @@
 @media (max-width: 768px) {
   .expertise {
     margin-top: 20px;
+    text-align: center;
+  }
+  .progressbar {
+    margin-left: -50% !important;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 568px) {
+  .expertise {
+    text-align: center;
+    padding: 0 10px;
+  }
+  .percent {
+    font-size: 2rem !important;
+  }
+  h4 {
+    font-size: 0.7rem;
   }
 }

@@ -220,6 +220,14 @@
     }
   }
   .information {
-    grid-template-rows: 300px auto 5%;
+    grid-template-rows: 250px auto 5%;
+  }
+}
+@media (max-width: 576px) {
+  .information {
+    grid-template-rows: 120px auto 5%;
+  }
+  .myfoto {
+    width: 100%;
   }
 }

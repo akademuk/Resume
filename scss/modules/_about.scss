@@ -29,3 +29,20 @@
     margin: 0 0 0 13%;
   }
 }
+@media (max-width: 568px) {
+  .about-me {
+    margin: 0 0 0 7%;
+    padding-right: 10px;
+    height: 350px;
+  }
+  .about-me-tittle {
+    font-size: 1rem;
+  }
+  .open-text,
+  .open-link {
+    font-size: 0.8rem;
+  }
+  .main-information {
+    width: 100%;
+  }
+}
