@@ -70,3 +70,12 @@ header {
     height: auto;
   }
 }
+@media (max-width: 320px) {
+  header {
+    display: none;
+  }
+  .information {
+    grid-template-rows: 95% 5% !important;
+    margin-top: 35%;
+  }
+}

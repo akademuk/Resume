@@ -310,6 +310,17 @@ header {
   }
 }
 
+@media (max-width: 320px) {
+  header {
+    display: none;
+  }
+  .information {
+    -ms-grid-rows: 95% 5% !important;
+        grid-template-rows: 95% 5% !important;
+    margin-top: 35%;
+  }
+}
+
 .container-header {
   width: 50%;
   height: auto;
