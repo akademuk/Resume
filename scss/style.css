@@ -281,11 +281,8 @@ header {
 }
 
 @media (max-width: 768px) {
-  header {
-    height: 300px;
-  }
   .container-text {
-    height: inherit;
+    height: 300px;
     max-height: 300px;
   }
 }
@@ -588,7 +585,7 @@ footer {
 
 @media (max-width: 768px) {
   .about-me {
-    margin: 5% 0 0 13%;
+    margin: 10% 0 0 13%;
   }
 }
 
