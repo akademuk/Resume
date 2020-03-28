@@ -282,7 +282,7 @@ header {
 
 @media (max-width: 768px) {
   header {
-    height: 300px;
+    height: 100%;
   }
 }
 
@@ -584,7 +584,7 @@ footer {
 
 @media (max-width: 768px) {
   .about-me {
-    margin: 13% 0 0 13%;
+    margin: 5% 0 0 13%;
   }
 }
 
@@ -832,6 +832,12 @@ footer {
   }
   100% {
     width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise {
+    margin-top: 20px;
   }
 }
 
@@ -1229,6 +1235,10 @@ footer {
   }
   .sidebar .my-information {
     display: none;
+  }
+  .information {
+    -ms-grid-rows: 18% auto 5%;
+        grid-template-rows: 18% auto 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
