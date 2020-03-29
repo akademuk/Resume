@@ -62,7 +62,7 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    height: 250px;
+    height: 220px;
   }
 }
 @media (max-width: 568px) {
@@ -71,6 +71,6 @@ header {
   }
   .information {
     grid-template-rows: 95% 5% !important;
-    margin-top: 35%;
+    margin-top: 220px;
   }
 }

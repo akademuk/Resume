@@ -191,6 +191,36 @@
         }
       }
     }
+    .languases-menu {
+      display: flex !important;
+      justify-content: space-around;
+      align-items: flex-end;
+      line-height: 0 !important;
+      .languages-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around !important;
+        height: 100%;
+        margin-bottom: 0;
+        font-size: 3vw !important;
+        &::after {
+          width: 100% !important;
+          display: flex;
+        }
+      }
+      .languages-name-english {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around !important;
+        height: 100%;
+        margin-bottom: 0;
+        font-size: 3vw !important;
+        &::after {
+          width: 100% !important;
+          display: flex;
+        }
+      }
+    }
   }
   .menu-text-flex {
     display: flex;
