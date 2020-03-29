@@ -739,6 +739,12 @@ footer {
   }
 }
 
+@media (max-width: 320px) {
+  .about-me {
+    height: auto;
+  }
+}
+
 .expertise {
   padding: 0 50px;
 }

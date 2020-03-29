@@ -59,3 +59,8 @@
     font-size: calc(1.5rem - 0.2vh);
   }
 }
+@media (max-width: 320px) {
+  .about-me {
+    height: auto;
+  }
+}
