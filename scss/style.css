@@ -599,8 +599,8 @@ header {
 
 @media (max-width: 568px) {
   .myfoto {
-    width: 75vw !important;
-    height: 50vw;
+    width: 50vw !important;
+    height: 220px;
   }
   .myfoto img {
     height: 100%;
@@ -620,6 +620,13 @@ header {
   }
   .menu-text {
     font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .myfoto {
+    width: 100vw !important;
+    height: 220px;
   }
 }
 
