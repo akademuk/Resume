@@ -246,7 +246,7 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   main {
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% 70% !important;
     -ms-grid-rows: 100%;
     grid-template-rows: 100%;
   }
