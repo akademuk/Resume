@@ -1498,7 +1498,7 @@ footer {
     width: 30%;
   }
   main .information {
-    width: 70%;
+    width: 100%;
   }
   .information {
     display: -webkit-box;
@@ -1508,9 +1508,10 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 3%;
   }
   header {
-    height: 200px;
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

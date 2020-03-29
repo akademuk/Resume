@@ -251,14 +251,15 @@
       width: 30%;
     }
     .information {
-      width: 70%;
+      width: 100%;
     }
   }
   .information {
     display: flex;
     flex-direction: column;
+    margin-left: 3%;
   }
   header {
-    height: 200px;
+    display: none;
   }
 }
