@@ -10,6 +10,12 @@
     font-weight: 600;
   }
 }
+.about-me-text {
+  color: $gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
 .open-text,
 .open-link {
   color: $gainsboro;
@@ -34,6 +40,9 @@
     margin: 0 0 0 7%;
     padding-right: 10px;
     height: 440px;
+  }
+  .about-me-text {
+    font-size: 0.8rem;
   }
   .about-me-tittle {
     font-size: calc(1rem - 0.2vh);
