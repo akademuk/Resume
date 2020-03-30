@@ -1487,31 +1487,4 @@ footer {
         grid-template-rows: 20vh auto 5%;
   }
 }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .sidebar {
-    width: 30%;
-  }
-  main .information {
-    width: 100%;
-  }
-  .information {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-left: 3%;
-  }
-  header {
-    display: none;
-  }
-}
 /*# sourceMappingURL=style.css.map */

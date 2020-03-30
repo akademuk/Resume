@@ -244,22 +244,3 @@
     grid-template-rows: 20vh auto 5%;
   }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  main {
-    display: flex;
-    .sidebar {
-      width: 30%;
-    }
-    .information {
-      width: 100%;
-    }
-  }
-  .information {
-    display: flex;
-    flex-direction: column;
-    margin-left: 3%;
-  }
-  header {
-    display: none;
-  }
-}
