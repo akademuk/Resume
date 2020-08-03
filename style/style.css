@@ -1022,10 +1022,6 @@ footer {
   width: 100%;
 }
 
-.languages-height-container {
-  margin-top: 20px !important;
-}
-
 .email::before {
   content: "";
   background: url(../img/email.png);
