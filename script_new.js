@@ -37,6 +37,7 @@ class MacOSPortfolio {
         this.initDraggableWindows();
         this.initAppleMenu();
         this.initChat();
+        this.initIOSTabBar();
     }
 
     // ========================================
@@ -323,13 +324,16 @@ class MacOSPortfolio {
         window.classList.add('active');
     }
 
-    centerWindow(window) {
-        const rect = window.getBoundingClientRect();
-        const left = (window.innerWidth - rect.width) / 2;
-        const top = (window.innerHeight - rect.height - 80) / 2 + 28; // Account for menu bar and dock
+    centerWindow(windowElement) {
+        const container = document.querySelector('.windows-container');
+        const containerRect = container.getBoundingClientRect();
+        const windowRect = windowElement.getBoundingClientRect();
         
-        window.style.left = Math.max(0, left) + 'px';
-        window.style.top = Math.max(28, top) + 'px';
+        const left = (containerRect.width - windowRect.width) / 2;
+        const top = (containerRect.height - windowRect.height) / 2 + 28; // Account for menu bar
+        
+        windowElement.style.left = Math.max(20, left) + 'px';
+        windowElement.style.top = Math.max(28, top) + 'px';
     }
 
     updateDock(appName, isActive) {
@@ -868,7 +872,19 @@ class MacOSPortfolio {
         const viewerTitle = this.projectViewer.viewerTitle;
         const viewerUrl = this.projectViewer.viewerUrl;
         
-        this.openWindow('viewer');
+        // Open viewer window manually since ID is 'project-viewer' not 'viewer-window'
+        if (viewerWindow && !viewerWindow.classList.contains('open')) {
+            viewerWindow.classList.add('open');
+            this.centerWindow(viewerWindow);
+            this.bringToFront(viewerWindow);
+            
+            // Set custom dimensions for project viewer
+            viewerWindow.style.width = '90%';
+            viewerWindow.style.height = '85%';
+            viewerWindow.style.maxWidth = '1400px';
+        } else if (viewerWindow) {
+            this.bringToFront(viewerWindow);
+        }
         
         iframe.src = url;
         viewerTitle.textContent = name;
@@ -878,17 +894,8 @@ class MacOSPortfolio {
         iframe.style.opacity = '0.5';
         iframe.addEventListener('load', () => {
             iframe.style.opacity = '1';
-            this.showNotification('Проект загружен', `${name} открыт для просмотра`);
+            this.showNotification('Project Loaded', `${name} is now open`);
         }, { once: true });
-        
-        setTimeout(() => {
-            viewerWindow.style.left = '50%';
-            viewerWindow.style.top = '50%';
-            viewerWindow.style.transform = 'translate(-50%, -50%)';
-            viewerWindow.style.width = '90%';
-            viewerWindow.style.height = '85%';
-            viewerWindow.style.maxWidth = '1400px';
-        }, 100);
     }
 
     // ========================================
@@ -1112,6 +1119,12 @@ MacOSPortfolio.prototype.initChat = function() {
     const TELEGRAM_BOT_TOKEN = '8465705982:AAE1kox8TLjNqEDGzZnwIINXEEobtbFdBSM';
     const TELEGRAM_CHAT_ID = '2110512187'; // Fedorov Oleg (@web_marvel)
     
+    // Store last update ID for polling
+    this.lastUpdateId = 0;
+    
+    // Start polling for new Telegram messages
+    this.startTelegramPolling(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID);
+    
     // Character counter
     chatInput.addEventListener('input', () => {
         const length = chatInput.value.length;
@@ -1143,22 +1156,14 @@ MacOSPortfolio.prototype.initChat = function() {
         try {
             await this.sendToTelegram(message, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID);
             
-            // Simulate response after delay
+            // Hide typing indicator after sending
             setTimeout(() => {
                 document.getElementById('typing-indicator').style.display = 'none';
-                this.addChatMessage('Спасибо за сообщение! Я получил его в Telegram и отвечу в ближайшее время. 😊', 'received');
-                
-                // Show notification badge
-                const badge = document.getElementById('chat-badge');
-                if (!document.getElementById('chat-window').classList.contains('active')) {
-                    badge.style.display = 'block';
-                    badge.textContent = '1';
-                }
-            }, 2000);
+            }, 1000);
             
         } catch (error) {
             document.getElementById('typing-indicator').style.display = 'none';
-            this.addChatMessage('❌ Ошибка отправки. Проверьте настройки Telegram Bot.', 'received');
+            this.addChatMessage('❌ Error sending message. Check Telegram Bot settings.', 'received');
             console.error('Telegram error:', error);
         }
     };
@@ -1172,7 +1177,7 @@ MacOSPortfolio.prototype.initChat = function() {
     });
     
     attachBtn.addEventListener('click', () => {
-        this.showNotification('Функция недоступна', 'Отправка файлов будет добавлена в следующем обновлении');
+        this.showNotification('Feature Unavailable', 'File attachments will be added in the next update');
     });
     
     // Clear badge when window opens
@@ -1183,6 +1188,62 @@ MacOSPortfolio.prototype.initChat = function() {
         }
     });
     observer.observe(chatWindow, { attributes: true, attributeFilter: ['class'] });
+};
+
+// Telegram Polling - Check for new messages from Telegram
+MacOSPortfolio.prototype.startTelegramPolling = function(botToken, chatId) {
+    if (botToken === 'YOUR_BOT_TOKEN_HERE' || chatId === 'YOUR_CHAT_ID_HERE') {
+        console.warn('⚠️ Telegram Bot not configured! Polling disabled.');
+        return;
+    }
+    
+    const pollTelegram = async () => {
+        try {
+            const url = `https://api.telegram.org/bot${botToken}/getUpdates?offset=${this.lastUpdateId + 1}&timeout=30`;
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            if (data.ok && data.result.length > 0) {
+                for (const update of data.result) {
+                    // Update last update ID
+                    this.lastUpdateId = update.update_id;
+                    
+                    // Check if message is from the correct chat
+                    if (update.message && update.message.chat.id.toString() === chatId) {
+                        const messageText = update.message.text;
+                        
+                        // Don't show bot messages that start with "🔔 Новое сообщение"
+                        if (!messageText.startsWith('🔔 Новое сообщение') && 
+                            !messageText.startsWith('🔔 New message')) {
+                            
+                            // Add message to chat UI
+                            this.addChatMessage(messageText, 'received');
+                            
+                            // Show notification badge if chat window is not active
+                            const chatWindow = document.getElementById('chat-window');
+                            const badge = document.getElementById('chat-badge');
+                            if (!chatWindow.classList.contains('active')) {
+                                badge.style.display = 'block';
+                                const currentCount = parseInt(badge.textContent) || 0;
+                                badge.textContent = currentCount + 1;
+                            }
+                            
+                            // Show system notification
+                            this.showNotification('New Message', 'You have a new message from Telegram');
+                        }
+                    }
+                }
+            }
+        } catch (error) {
+            console.error('Telegram polling error:', error);
+        }
+        
+        // Continue polling every 5 seconds
+        setTimeout(pollTelegram, 5000);
+    };
+    
+    // Start polling
+    pollTelegram();
 };
 
 MacOSPortfolio.prototype.addChatMessage = function(text, type) {
@@ -1212,10 +1273,10 @@ MacOSPortfolio.prototype.addChatMessage = function(text, type) {
 };
 
 MacOSPortfolio.prototype.sendToTelegram = async function(message, botToken, chatId) {
-    // Проверка конфигурации
+    // Check configuration
     if (botToken === 'YOUR_BOT_TOKEN_HERE' || chatId === 'YOUR_CHAT_ID_HERE') {
-        console.warn('⚠️ Telegram Bot не настроен! Установите TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID в script_new.js');
-        // Симулируем успешную отправку для демонстрации
+        console.warn('⚠️ Telegram Bot not configured! Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in script_new.js');
+        // Simulate successful sending for demo
         return Promise.resolve();
     }
     
@@ -1223,7 +1284,7 @@ MacOSPortfolio.prototype.sendToTelegram = async function(message, botToken, chat
     
     const payload = {
         chat_id: chatId,
-        text: `🔔 Новое сообщение с сайта-резюме:\n\n${message}`,
+        text: `🔔 New message from resume website:\n\n${message}`,
         parse_mode: 'HTML'
     };
     
@@ -1503,6 +1564,80 @@ MacOSPortfolio.prototype.initCursorEffects = function() {
         }
     `;
     document.head.appendChild(rippleStyle);
+};
+
+// ========================================
+// iOS Tab Bar Navigation (Mobile)
+// ========================================
+
+MacOSPortfolio.prototype.initIOSTabBar = function() {
+    const tabBar = document.getElementById('ios-tabbar');
+    if (!tabBar) return;
+    
+    const tabs = tabBar.querySelectorAll('.ios-tab');
+    const windowHeader = document.querySelector('.window-header');
+    
+    // Handle tab clicks
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const appName = tab.getAttribute('data-app');
+            
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Close all windows
+            document.querySelectorAll('.window').forEach(w => {
+                w.classList.remove('open', 'active');
+            });
+            
+            // Open selected window
+            const targetWindow = document.getElementById(`${appName}-window`);
+            if (targetWindow) {
+                targetWindow.classList.add('open', 'active');
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+    
+    // Handle back button (iOS header back arrow)
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('window-header') || 
+            e.target.closest('.window-header')) {
+            
+            // Check if clicking on back button area (left 60px)
+            if (e.clientX < 60) {
+                // Close current window
+                const activeWindow = document.querySelector('.window.active');
+                if (activeWindow) {
+                    activeWindow.classList.remove('open', 'active');
+                    
+                    // Reset to first tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabs[0].classList.add('active');
+                    
+                    // Open about window
+                    const aboutWindow = document.getElementById('about-window');
+                    if (aboutWindow) {
+                        aboutWindow.classList.add('open', 'active');
+                    }
+                }
+            }
+        }
+    });
+    
+    // Check if mobile and open first window by default
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        const aboutWindow = document.getElementById('about-window');
+        if (aboutWindow) {
+            aboutWindow.classList.add('open', 'active');
+        }
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {

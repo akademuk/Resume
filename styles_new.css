@@ -58,6 +58,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide iOS Tab Bar on Desktop */
+.ios-tabbar {
+    display: none;
+}
+
 /* ========================================
    Desktop & Wallpaper
    ======================================== */
@@ -1865,15 +1870,18 @@ body {
     cursor: pointer;
     transition: all var(--transition-bounce);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    margin: 0 4px;
+    z-index: 1;
 }
 
 .dock-item:hover {
-    transform: translateY(-20px) scale(1.3);
+    transform: translateY(-20px) scale(1.2);
     filter: drop-shadow(0 8px 16px rgba(0, 122, 255, 0.4));
+    z-index: 10;
 }
 
 .dock-item:active {
-    transform: translateY(-16px) scale(1.25);
+    transform: translateY(-16px) scale(1.15);
 }
 
 .dock-item:hover .dock-label {
@@ -3000,6 +3008,396 @@ body {
     0% { transform: scale(0); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+/* ========================================
+   iOS Mobile Styles (iPhone/iPad)
+   ======================================== */
+
+@media only screen and (max-width: 768px) {
+    /* Hide macOS UI elements */
+    .menu-bar,
+    .dock,
+    .spotlight,
+    .notification-center,
+    .apple-menu-dropdown {
+        display: none !important;
+    }
+    
+    body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* iOS-style container */
+    .desktop {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 0;
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    /* iOS Status Bar */
+    .desktop::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 10000;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* iOS Status Bar Content */
+    .desktop::after {
+        content: '9:41';
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 44px;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        z-index: 10001;
+        letter-spacing: -0.3px;
+    }
+    
+    /* iOS Home Screen Grid */
+    .window {
+        position: relative !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+        backdrop-filter: none !important;
+        min-height: 100vh;
+        padding-top: 44px;
+        display: none;
+    }
+    
+    .window.open {
+        display: block !important;
+        animation: slideUpIOS 0.3s cubic-bezier(0.36, 0.66, 0.04, 1);
+    }
+    
+    @keyframes slideUpIOS {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    /* iOS Window Header */
+    .window-header {
+        position: fixed;
+        top: 44px;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        padding: 0 16px;
+        z-index: 1000;
+        box-shadow: none;
+        justify-content: center;
+    }
+    
+    .window-controls {
+        display: none !important;
+    }
+    
+    .window-title {
+        color: #000;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+    }
+    
+    .window-header::before {
+        content: '‹';
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 34px;
+        color: #007AFF;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    
+    /* iOS Window Content */
+    .window-content {
+        padding: 100px 20px 30px;
+        height: auto !important;
+        overflow-y: visible !important;
+    }
+    
+    /* iOS Navigation Bar at Bottom */
+    body::after {
+        display: none; /* Hiding duplicate background */
+    }
+    
+    /* iOS Tab Bar */
+    .ios-tabbar {
+        display: flex !important; /* Show only on mobile */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 83px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 8px 20px calc(8px + env(safe-area-inset-bottom));
+        z-index: 10000;
+    }
+    
+    .ios-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: #8E8E93;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex: 1;
+        padding: 8px 0;
+    }
+    
+    .ios-tab.active {
+        color: #007AFF;
+    }
+    
+    .ios-tab i {
+        font-size: 24px;
+    }
+    
+    .ios-tab span {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+    }
+    
+    /* iOS List Styles */
+    .about-section,
+    .skill-section,
+    .experience-timeline,
+    .projects-grid {
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .about-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    .about-avatar {
+        width: 100px;
+        height: 100px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 15px;
+    }
+    
+    .about-name {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+    
+    .about-title {
+        font-size: 17px;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+    
+    .about-info {
+        padding: 20px;
+    }
+    
+    .info-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .info-item:last-child {
+        border-bottom: none;
+    }
+    
+    .info-item i {
+        width: 30px;
+        color: #007AFF;
+        font-size: 18px;
+    }
+    
+    /* iOS Cards */
+    .skill-card,
+    .experience-item,
+    .project-card {
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* iOS Buttons */
+    .btn,
+    .project-links a {
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        border: none;
+        background: #007AFF;
+        color: white;
+        box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+    }
+    
+    .btn:active {
+        transform: scale(0.96);
+    }
+    
+    /* iOS Form Inputs */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border-radius: 10px;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        padding: 12px 16px;
+        font-size: 17px;
+        background: rgba(0, 0, 0, 0.03);
+        transition: all 0.2s;
+    }
+    
+    input:focus,
+    textarea:focus {
+        background: white;
+        border-color: #007AFF;
+        box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+    }
+    
+    /* Disable cursor effects on mobile */
+    .cursor-particle,
+    .ripple {
+        display: none !important;
+    }
+    
+    /* Projects Grid */
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+    
+    /* Chat iOS Style */
+    #chat-window .window-content {
+        padding: 100px 0 120px;
+    }
+    
+    .chat-messages {
+        padding: 0 16px;
+    }
+    
+    .chat-input-area {
+        position: fixed;
+        bottom: 34px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 8px 16px;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Skills Tabs iOS */
+    .skills-tabs {
+        display: flex;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 2px;
+        margin-bottom: 20px;
+    }
+    
+    .skill-tab {
+        flex: 1;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+    }
+    
+    .skill-tab.active {
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Terminal iOS */
+    .terminal-content {
+        font-size: 13px;
+        padding: 16px;
+    }
+    
+    /* Settings iOS */
+    .settings-section {
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .setting-item {
+        padding: 12px 16px;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .setting-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* iOS Toggle Switch */
+    .toggle-switch {
+        transform: scale(0.8);
+    }
 }
 
 /* ========================================
