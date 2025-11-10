@@ -1,0 +1,944 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background: #000;
+}
+
+/* Рабочий стол */
+.desktop {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.desktop-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Иконки рабочего стола */
+.desktop-icons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+.desktop-icon {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.desktop-icon:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-image {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-image svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.icon-label {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    word-wrap: break-word;
+    max-width: 80px;
+}
+
+/* Окна */
+.windows-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 48px);
+    pointer-events: none;
+}
+
+.window {
+    position: absolute;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    min-width: 400px;
+    min-height: 300px;
+    max-width: 90%;
+    max-height: calc(100vh - 100px);
+    display: none;
+    flex-direction: column;
+    pointer-events: auto;
+    overflow: hidden;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.window.active {
+    display: flex;
+    z-index: 100;
+}
+
+.window.minimized {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.window.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 48px) !important;
+    max-width: 100% !important;
+    max-height: calc(100vh - 48px) !important;
+    border-radius: 0;
+}
+
+/* Заголовок окна */
+.window-titlebar {
+    background: #f0f0f0;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    cursor: move;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.window-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+
+.window-icon {
+    font-size: 16px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-btn {
+    width: 46px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    color: #000;
+}
+
+.window-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.close-btn:hover {
+    background-color: #e81123;
+    color: white;
+}
+
+.minimize-btn {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.maximize-btn {
+    font-size: 14px;
+}
+
+/* Контент окна */
+.window-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    background: #fff;
+}
+
+.window-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.window-content::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 6px;
+}
+
+.window-content::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Стили для окна "Обо мне" */
+.profile-section {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+}
+
+.profile-avatar svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-section h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #0078D4;
+}
+
+.profile-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 32px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0078D4;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Стили для окна "Навыки" */
+.skills-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    margin-bottom: 32px;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #0078D4;
+}
+
+.skill-item {
+    margin-bottom: 16px;
+}
+
+.skill-name {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #0078D4, #00bcf2);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+
+/* Стили для окна "Опыт работы" */
+.experience-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #0078D4;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -46px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0078D4;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #0078D4;
+}
+
+.timeline-date {
+    font-size: 13px;
+    color: #0078D4;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.timeline-content h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+}
+
+.timeline-content li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Стили для окна "Проекты" */
+.projects-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 12px;
+}
+
+.project-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.project-year {
+    background: #0078D4;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tech span {
+    background: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #0078D4;
+    border: 1px solid #0078D4;
+}
+
+/* Стили для окна "Контакты" */
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #0078D4;
+    text-align: center;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-item:hover {
+    background: #f0f0f0;
+    transform: translateX(4px);
+}
+
+.contact-icon {
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-size: 16px;
+    color: #0078D4;
+    font-weight: 500;
+}
+
+/* Панель задач */
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.taskbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.start-button {
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.start-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.start-button.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    width: 280px;
+    color: white;
+}
+
+.search-box svg {
+    flex-shrink: 0;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.taskbar-apps {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.taskbar-app {
+    height: 40px;
+    min-width: 40px;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.taskbar-app:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.taskbar-app.active {
+    border-bottom-color: #0078D4;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.taskbar-app-icon {
+    font-size: 18px;
+}
+
+.taskbar-app-label {
+    font-size: 13px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.taskbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.system-tray {
+    display: flex;
+    gap: 4px;
+}
+
+.tray-icon {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.tray-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clock {
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    text-align: right;
+}
+
+.clock:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clock-time {
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.clock-date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 11px;
+}
+
+.notification-button {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.notification-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Меню Пуск */
+.start-menu {
+    position: absolute;
+    bottom: 56px;
+    left: 8px;
+    width: 600px;
+    height: 700px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(40px);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.2s ease-out;
+}
+
+.start-menu.active {
+    display: flex;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-menu-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.start-menu-apps {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.start-menu-apps::-webkit-scrollbar {
+    width: 8px;
+}
+
+.start-menu-apps::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.start-menu-apps::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.start-menu-section {
+    margin-bottom: 24px;
+}
+
+.start-menu-section h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-left: 4px;
+}
+
+.start-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.start-app-tile {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.start-app-tile:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.start-app-tile:active {
+    transform: scale(0.95);
+}
+
+.tile-icon {
+    font-size: 32px;
+}
+
+.tile-label {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+.start-menu-footer {
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.user-profile:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0078D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.user-name {
+    color: white;
+    font-size: 14px;
+}
+
+.power-button {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.power-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .start-menu {
+        width: calc(100% - 16px);
+        height: calc(100vh - 64px);
+        left: 8px;
+        bottom: 56px;
+    }
+
+    .start-apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .window {
+        min-width: 300px;
+        width: calc(100% - 20px) !important;
+        left: 10px !important;
+    }
+
+    .desktop-icons {
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 180px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .taskbar-app-label {
+        display: none;
+    }
+
+    .search-box {
+        width: 120px;
+    }
+
+    .window-content {
+        padding: 16px;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.window.active {
+    animation: fadeIn 0.2s ease-out;
+}

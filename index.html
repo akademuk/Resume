@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oleg Fedorov - Middle Markup Developer Portfolio. Резюме веб-разработчика с опытом создания современных интерфейсов.">
+    <meta name="keywords" content="frontend developer, markup developer, web developer, portfolio, резюме">
+    <meta name="author" content="Oleg Fedorov">
+    <title>Oleg Fedorov - Middle Markup Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- macOS Desktop -->
+    <div class="macos-desktop">
+        <!-- Фоновое изображение -->
+        <div class="desktop-background"></div>
+
+        <!-- Иконки на рабочем столе -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" data-app="about">
+                <div class="icon-image">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="4" fill="#0078D4"/>
+                        <path d="M24 12C17.37 12 12 17.37 12 24C12 30.63 17.37 36 24 36C30.63 36 36 30.63 36 24C36 17.37 30.63 12 24 12ZM24 18C25.93 18 27.5 19.57 27.5 21.5C27.5 23.43 25.93 25 24 25C22.07 25 20.5 23.43 20.5 21.5C20.5 19.57 22.07 18 24 18ZM24 33C20.67 33 17.8 31.15 16.5 28.4C16.55 25.6 22.5 24.1 24 24.1C25.49 24.1 31.45 25.6 31.5 28.4C30.2 31.15 27.33 33 24 33Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="icon-label">Обо мне</div>
+            </div>
+
+            <div class="desktop-icon" data-app="skills">
+                <div class="icon-image">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="4" fill="#107C10"/>
+                        <path d="M35 16H32V13C32 11.9 31.1 11 30 11H18C16.9 11 16 11.9 16 13V16H13C11.9 16 11 16.9 11 18V33C11 34.1 11.9 35 13 35H35C36.1 35 37 34.1 37 33V18C37 16.9 36.1 16 35 16ZM18 13H30V16H18V13ZM35 33H13V18H35V33Z" fill="white"/>
+                        <path d="M24 22C22.35 22 21 23.35 21 25C21 26.65 22.35 28 24 28C25.65 28 27 26.65 27 25C27 23.35 25.65 22 24 22Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="icon-label">Навыки</div>
+            </div>
+
+            <div class="desktop-icon" data-app="experience">
+                <div class="icon-image">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="4" fill="#FF8C00"/>
+                        <path d="M38 15H34V13C34 11.9 33.1 11 32 11H16C14.9 11 14 11.9 14 13V15H10C8.9 15 8 15.9 8 17V34C8 35.1 8.9 36 10 36H38C39.1 36 40 35.1 40 34V17C40 15.9 39.1 15 38 15ZM16 13H32V15H16V13ZM38 34H10V17H38V34Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="icon-label">Опыт работы</div>
+            </div>
+
+            <div class="desktop-icon" data-app="projects">
+                <div class="icon-image">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="4" fill="#8764B8"/>
+                        <path d="M32 12H16C14.9 12 14 12.9 14 14V34C14 35.1 14.9 36 16 36H32C33.1 36 34 35.1 34 34V14C34 12.9 33.1 12 32 12ZM32 34H16V14H32V34Z" fill="white"/>
+                        <rect x="18" y="18" width="12" height="2" fill="white"/>
+                        <rect x="18" y="23" width="12" height="2" fill="white"/>
+                        <rect x="18" y="28" width="8" height="2" fill="white"/>
+                    </svg>
+                </div>
+                <div class="icon-label">Проекты</div>
+            </div>
+
+            <div class="desktop-icon" data-app="contact">
+                <div class="icon-image">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="4" fill="#E74856"/>
+                        <path d="M38 14H10C8.9 14 8.01 14.9 8.01 16L8 32C8 33.1 8.9 34 10 34H38C39.1 34 40 33.1 40 32V16C40 14.9 39.1 14 38 14ZM38 32H10V18L24 25L38 18V32ZM24 23L10 16H38L24 23Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="icon-label">Контакты</div>
+            </div>
+        </div>
+
+        <!-- Окна приложений -->
+        <div class="windows-container">
+            <!-- Окно "Обо мне" -->
+            <div class="window" id="about-window" data-app="about">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <span class="window-icon">👤</span>
+                        <span>Обо мне</span>
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-btn minimize-btn">−</button>
+                        <button class="window-btn maximize-btn">□</button>
+                        <button class="window-btn close-btn">×</button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="profile-section">
+                        <div class="profile-avatar">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#0078D4"/>
+                                <circle cx="50" cy="35" r="15" fill="white"/>
+                                <path d="M50 55C35 55 25 65 25 75V85H75V75C75 65 65 55 50 55Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h2>Middle Markup Developer</h2>
+                        <p class="profile-description">
+                            Привет! Я middle разработчик с опытом создания современных веб-интерфейсов. 
+                            Специализируюсь на HTML, CSS, JavaScript и создании адаптивных, доступных 
+                            и производительных веб-приложений.
+                        </p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <div class="stat-value">3+</div>
+                                <div class="stat-label">Года опыта</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Проектов</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">15+</div>
+                                <div class="stat-label">Технологий</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Окно "Навыки" -->
+            <div class="window" id="skills-window" data-app="skills">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <span class="window-icon">💼</span>
+                        <span>Навыки</span>
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-btn minimize-btn">−</button>
+                        <button class="window-btn maximize-btn">□</button>
+                        <button class="window-btn close-btn">×</button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="skills-section">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="skill-item">
+                                <div class="skill-name">HTML5 / CSS3</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">JavaScript / TypeScript</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">React / Vue.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Sass / LESS</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Инструменты</h3>
+                            <div class="skill-item">
+                                <div class="skill-name">Git / GitHub</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Webpack / Vite</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Figma / Adobe XD</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Дополнительно</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Responsive Design</span>
+                                <span class="skill-tag">Accessibility</span>
+                                <span class="skill-tag">Performance</span>
+                                <span class="skill-tag">SEO</span>
+                                <span class="skill-tag">Cross-browser</span>
+                                <span class="skill-tag">Animations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Окно "Опыт работы" -->
+            <div class="window" id="experience-window" data-app="experience">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <span class="window-icon">📊</span>
+                        <span>Опыт работы</span>
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-btn minimize-btn">−</button>
+                        <button class="window-btn maximize-btn">□</button>
+                        <button class="window-btn close-btn">×</button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="experience-section">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">2023 - Настоящее время</div>
+                                <div class="timeline-content">
+                                    <h3>Middle Markup Developer</h3>
+                                    <h4>Tech Company Inc.</h4>
+                                    <ul>
+                                        <li>Разработка и поддержка корпоративных веб-приложений</li>
+                                        <li>Создание переиспользуемых UI компонентов</li>
+                                        <li>Оптимизация производительности и доступности</li>
+                                        <li>Код-ревью и менторинг junior разработчиков</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">2021 - 2023</div>
+                                <div class="timeline-content">
+                                    <h3>Junior Frontend Developer</h3>
+                                    <h4>Web Studio Pro</h4>
+                                    <ul>
+                                        <li>Верстка адаптивных лендингов и многостраничных сайтов</li>
+                                        <li>Интеграция с CMS системами</li>
+                                        <li>Работа с JavaScript библиотеками</li>
+                                        <li>Кроссбраузерная совместимость</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">2020 - 2021</div>
+                                <div class="timeline-content">
+                                    <h3>Trainee Developer</h3>
+                                    <h4>Digital Agency</h4>
+                                    <ul>
+                                        <li>Изучение современных веб-технологий</li>
+                                        <li>Верстка простых страниц по макетам</li>
+                                        <li>Работа в команде разработчиков</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Окно "Проекты" -->
+            <div class="window" id="projects-window" data-app="projects">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <span class="window-icon">📁</span>
+                        <span>Проекты</span>
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-btn minimize-btn">−</button>
+                        <button class="window-btn maximize-btn">□</button>
+                        <button class="window-btn close-btn">×</button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="projects-section">
+                        <div class="project-grid">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>E-Commerce Platform</h3>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <p>Полнофункциональная платформа интернет-магазина с корзиной, фильтрами и адаптивным дизайном.</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>TypeScript</span>
+                                    <span>Sass</span>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>Dashboard Analytics</h3>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <p>Интерактивная панель аналитики с графиками, таблицами и real-time обновлениями.</p>
+                                <div class="project-tech">
+                                    <span>Vue.js</span>
+                                    <span>Chart.js</span>
+                                    <span>Tailwind</span>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>Portfolio Website</h3>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <p>Креативный сайт-портфолио с анимациями и параллакс эффектами.</p>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>Task Manager App</h3>
+                                    <span class="project-year">2023</span>
+                                </div>
+                                <p>Приложение для управления задачами с drag-and-drop функционалом.</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Redux</span>
+                                    <span>DnD Kit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Окно "Контакты" -->
+            <div class="window" id="contact-window" data-app="contact">
+                <div class="window-titlebar">
+                    <div class="window-title">
+                        <span class="window-icon">📧</span>
+                        <span>Контакты</span>
+                    </div>
+                    <div class="window-controls">
+                        <button class="window-btn minimize-btn">−</button>
+                        <button class="window-btn maximize-btn">□</button>
+                        <button class="window-btn close-btn">×</button>
+                    </div>
+                </div>
+                <div class="window-content">
+                    <div class="contact-section">
+                        <h2>Свяжитесь со мной</h2>
+                        <div class="contact-list">
+                            <a href="mailto:your.email@example.com" class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-info">
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-value">your.email@example.com</div>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+                                <div class="contact-icon">💻</div>
+                                <div class="contact-info">
+                                    <div class="contact-label">GitHub</div>
+                                    <div class="contact-value">github.com/yourusername</div>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-item">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-info">
+                                    <div class="contact-label">LinkedIn</div>
+                                    <div class="contact-value">linkedin.com/in/yourprofile</div>
+                                </div>
+                            </a>
+
+                            <a href="https://t.me/yourusername" target="_blank" class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-info">
+                                    <div class="contact-label">Telegram</div>
+                                    <div class="contact-value">@yourusername</div>
+                                </div>
+                            </a>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-info">
+                                    <div class="contact-label">Местоположение</div>
+                                    <div class="contact-value">Москва, Россия</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Панель задач -->
+        <div class="taskbar">
+            <div class="taskbar-left">
+                <button class="start-button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M0 0H9V9H0V0Z" fill="white"/>
+                        <path d="M11 0H20V9H11V0Z" fill="white"/>
+                        <path d="M0 11H9V20H0V11Z" fill="white"/>
+                        <path d="M11 11H20V20H11V11Z" fill="white"/>
+                    </svg>
+                </button>
+                <div class="search-box">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" fill="currentColor"/>
+                    </svg>
+                    <input type="text" placeholder="Поиск...">
+                </div>
+                <div class="taskbar-apps" id="taskbar-apps">
+                    <!-- Активные приложения будут добавляться динамически -->
+                </div>
+            </div>
+            <div class="taskbar-right">
+                <div class="system-tray">
+                    <button class="tray-icon" title="Сеть">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 0C4.13 0 1 3.13 1 7c0 3.87 3.13 7 7 7s7-3.13 7-7c0-3.87-3.13-7-7-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="white"/>
+                        </svg>
+                    </button>
+                    <button class="tray-icon" title="Звук">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2L4 6H1v4h3l4 4V2z" fill="white"/>
+                            <path d="M11 8c0-.5-.2-1-.5-1.3l-.9.9c.1.1.2.3.2.4s-.1.3-.2.4l.9.9c.3-.3.5-.8.5-1.3zm2-4.5l-.9.9c.7.7 1.1 1.7 1.1 2.6s-.4 1.9-1.1 2.6l.9.9c.9-.9 1.4-2.1 1.4-3.5s-.5-2.6-1.4-3.5z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="clock" id="clock">
+                    <div class="clock-time">00:00</div>
+                    <div class="clock-date">01.01.2024</div>
+                </div>
+                <button class="notification-button" title="Центр уведомлений">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Меню Пуск -->
+        <div class="start-menu" id="start-menu">
+            <div class="start-menu-content">
+                <div class="start-menu-apps">
+                    <div class="start-menu-section">
+                        <h3>Резюме</h3>
+                        <div class="start-apps-grid">
+                            <button class="start-app-tile" data-app="about">
+                                <div class="tile-icon">👤</div>
+                                <div class="tile-label">Обо мне</div>
+                            </button>
+                            <button class="start-app-tile" data-app="skills">
+                                <div class="tile-icon">💼</div>
+                                <div class="tile-label">Навыки</div>
+                            </button>
+                            <button class="start-app-tile" data-app="experience">
+                                <div class="tile-icon">📊</div>
+                                <div class="tile-label">Опыт</div>
+                            </button>
+                            <button class="start-app-tile" data-app="projects">
+                                <div class="tile-icon">📁</div>
+                                <div class="tile-label">Проекты</div>
+                            </button>
+                            <button class="start-app-tile" data-app="contact">
+                                <div class="tile-icon">📧</div>
+                                <div class="tile-label">Контакты</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="start-menu-footer">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                        <div class="user-name">Пользователь</div>
+                    </div>
+                    <button class="power-button" title="Выключение">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2V10M10 2C6.13 2 3 5.13 3 9C3 12.87 6.13 16 10 16C13.87 16 17 12.87 17 9C17 5.13 13.87 2 10 2Z" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
