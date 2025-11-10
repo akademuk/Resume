@@ -1,30 +1,36 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="description" content="Oleg Fedorov - Middle Markup Developer Portfolio. Modern web interfaces and applications.">
-    <meta name="keywords" content="frontend developer, markup developer, web developer, HTML, CSS, JavaScript, React, portfolio">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description"
+        content="Oleg Fedorov - Middle Markup Developer Portfolio. Modern web interfaces and applications.">
+    <meta name="keywords"
+        content="frontend developer, markup developer, web developer, HTML, CSS, JavaScript, React, portfolio">
     <meta name="author" content="Oleg Fedorov">
-    
+
     <!-- iOS Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Oleg Fedorov">
     <meta name="format-detection" content="telephone=no">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Oleg Fedorov - Middle Markup Developer">
     <meta property="og:description" content="Professional web developer portfolio">
     <meta property="og:type" content="website">
-    
+
     <title>Oleg Fedorov - Middle Markup Developer</title>
-    <link rel="stylesheet" href="styles_new.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- macOS Desktop -->
     <div class="macos-desktop">
@@ -35,13 +41,13 @@
                     <i class="fab fa-apple"></i>
                 </div>
                 <div class="menu-item active">Finder</div>
-                <div class="menu-item">Файл</div>
-                <div class="menu-item">Правка</div>
-                <div class="menu-item">Вид</div>
-                <div class="menu-item">Переход</div>
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Go</div>
             </div>
             <div class="menu-bar-right">
-                <div class="menu-icon" id="theme-toggle" title="Переключить тему">
+                <div class="menu-icon" id="theme-toggle" title="Toggle theme">
                     <i class="fas fa-circle-half-stroke"></i>
                 </div>
                 <div class="menu-icon" id="wifi-icon">
@@ -55,8 +61,8 @@
                     <i class="fas fa-magnifying-glass"></i>
                 </div>
                 <div class="menu-clock" id="menu-clock">
-                    <span class="clock-day">Пн</span>
-                    <span class="clock-date">10 ноя</span>
+                    <span class="clock-day">Mon</span>
+                    <span class="clock-date">Nov 10</span>
                     <span class="clock-time">12:00</span>
                 </div>
                 <div class="menu-icon" id="control-center">
@@ -65,16 +71,17 @@
             </div>
         </div>
 
+
         <!-- Apple Menu Dropdown -->
         <div class="apple-menu-dropdown" id="apple-menu-dropdown">
             <div class="menu-dropdown-item" id="about-mac">
                 <i class="fab fa-apple"></i>
-                <span>Об этом Mac</span>
+                <span>About this Mac</span>
             </div>
             <div class="menu-dropdown-divider"></div>
             <div class="menu-dropdown-item" id="menu-settings">
                 <i class="fas fa-gear"></i>
-                <span>Настройки системы...</span>
+                <span>System Preferences...</span>
             </div>
             <div class="menu-dropdown-item">
                 <i class="fas fa-box"></i>
@@ -83,31 +90,32 @@
             <div class="menu-dropdown-divider"></div>
             <div class="menu-dropdown-item">
                 <i class="fas fa-clock-rotate-left"></i>
-                <span>Недавние объекты</span>
+                <span>Recent Items</span>
             </div>
             <div class="menu-dropdown-divider"></div>
             <div class="menu-dropdown-item" id="menu-sleep">
                 <i class="fas fa-moon"></i>
-                <span>Режим сна</span>
+                <span>Sleep</span>
             </div>
             <div class="menu-dropdown-item" id="menu-restart">
                 <i class="fas fa-rotate-right"></i>
-                <span>Перезагрузить...</span>
+                <span>Restart...</span>
             </div>
             <div class="menu-dropdown-item" id="menu-shutdown">
                 <i class="fas fa-power-off"></i>
-                <span>Выключить...</span>
+                <span>Shut Down...</span>
             </div>
             <div class="menu-dropdown-divider"></div>
             <div class="menu-dropdown-item">
                 <i class="fas fa-lock"></i>
-                <span>Заблокировать экран</span>
+                <span>Lock Screen</span>
             </div>
             <div class="menu-dropdown-item">
                 <i class="fas fa-right-from-bracket"></i>
-                <span>Выйти из Oleg Fedorov...</span>
+                <span>Log Out...</span>
             </div>
         </div>
+
 
         <!-- Desktop Background with Wallpaper -->
         <div class="desktop-wallpaper"></div>
@@ -136,7 +144,8 @@
                     <div class="about-container">
                         <div class="profile-card">
                             <div class="profile-avatar-large">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230066ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300ccff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='100' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-size='80' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EOF%3C/text%3E%3C/svg%3E" alt="Oleg Fedorov">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230066ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300ccff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='100' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-size='80' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EOF%3C/text%3E%3C/svg%3E"
+                                    alt="Oleg Fedorov">
                             </div>
                             <h1 class="profile-name">Oleg Fedorov</h1>
                             <h2 class="profile-title">Middle Markup Developer</h2>
@@ -149,13 +158,33 @@
                         <div class="about-description">
                             <h3><i class="fas fa-quote-left"></i> About Me</h3>
                             <p>
-                                Hello! I'm Oleg — a developer with 3+ years of experience creating modern web interfaces. 
-                                I specialize in developing adaptive, performant, and accessible web applications.
+                                With over three years of professional
+                                experience in development, I specialize in
+                                creating clear, semantic, and responsive
+                                markup using HTML, CSS, and JavaScript. My
+                                attention to pixel-perfect implementation and
+                                accessibility (WCAG standards) ensures that the
+                                interfaces I create not only reflect the design
+                                concept but also work seamlessly across
+                                different devices and browsers.
                             </p>
                             <p>
-                                My passion is creating intuitive user interfaces that not only look beautiful 
-                                but also work perfectly. I follow best practices in web development and constantly 
-                                learn new technologies.
+                                Throughout my career, I have successfully
+                                implemented over 150 commercial projects of
+                                varying complexity, from landing pages to
+                                large-scale web applications. In addition to
+                                development, I regularly review code to
+                                maintain high standards of code quality and
+                                provide estimates of design implementation
+                                time to help clients and teams plan projects
+                                more effectively.
+                            </p>
+                            <p>
+                                With solid experience working with Git,
+                                preprocessors (Sass/LESS), and modern build
+                                tools, I successfully collaborate with designers
+                                and backend developers to create high-quality,
+                                maintainable code that drives business results.
                             </p>
                         </div>
 
@@ -164,36 +193,37 @@
                                 <div class="stat-icon">
                                     <i class="fas fa-calendar-check"></i>
                                 </div>
-                                <div class="stat-value">3+</div>
+                                <div class="stat-value">4+</div>
                                 <div class="stat-label">Years Experience</div>
                             </div>
                             <div class="stat-card">
                                 <div class="stat-icon">
                                     <i class="fas fa-folder-open"></i>
                                 </div>
-                                <div class="stat-value">50+</div>
-                                <div class="stat-label">Проектов</div>
+                                <div class="stat-value">150+</div>
+                                <div class="stat-label">Projects</div>
                             </div>
                             <div class="stat-card">
                                 <div class="stat-icon">
                                     <i class="fas fa-code"></i>
                                 </div>
                                 <div class="stat-value">15+</div>
-                                <div class="stat-label">Технологий</div>
+                                <div class="stat-label">Technologies</div>
                             </div>
                             <div class="stat-card">
                                 <div class="stat-icon">
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <div class="stat-value">100%</div>
-                                <div class="stat-label">Качество</div>
+                                <div class="stat-label">Quality</div>
                             </div>
                         </div>
 
+
                         <div class="quick-links">
-                            <a href="mailto:oleg.fedorov@example.com" class="quick-link-btn">
+                            <a href="mailto:akademuk24@gmail.com" class="quick-link-btn">
                                 <i class="fas fa-envelope"></i>
-                                <span>Написать письмо</span>
+                                <span>Send Email</span>
                             </a>
                             <a href="https://github.com/olegfedorov" target="_blank" class="quick-link-btn">
                                 <i class="fab fa-github"></i>
@@ -205,7 +235,7 @@
                             </a>
                             <button class="quick-link-btn" id="download-cv">
                                 <i class="fas fa-download"></i>
-                                <span>Скачать резюме</span>
+                                <span>Download Resume</span>
                             </button>
                         </div>
                     </div>
@@ -222,7 +252,7 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-code window-icon"></i>
-                        <span>Навыки</span>
+                        <span>Skills</span>
                     </div>
                 </div>
                 <div class="window-content">
@@ -234,7 +264,7 @@
                             </button>
                             <button class="skill-tab" data-tab="tools">
                                 <i class="fas fa-toolbox"></i>
-                                Инструменты
+                                Tools
                             </button>
                             <button class="skill-tab" data-tab="soft">
                                 <i class="fas fa-lightbulb"></i>
@@ -259,7 +289,7 @@
                                                 <div class="skill-progress" data-progress="95"></div>
                                             </div>
                                             <div class="skill-description">
-                                                Семантическая верстка, CSS Grid, Flexbox, анимации, кроссбраузерность
+                                                Semantic markup, CSS Grid, Flexbox, animations, cross-browser compatibility
                                             </div>
                                         </div>
 
@@ -275,7 +305,7 @@
                                                 <div class="skill-progress" data-progress="88"></div>
                                             </div>
                                             <div class="skill-description">
-                                                Асинхронность, DOM API, Fetch, модули, ООП
+                                                Asynchronous, DOM API, Fetch, modules, OOP
                                             </div>
                                         </div>
 
@@ -291,7 +321,7 @@
                                                 <div class="skill-progress" data-progress="85"></div>
                                             </div>
                                             <div class="skill-description">
-                                                Hooks, Context, Redux, Server Components, оптимизация
+                                                Hooks, Context, Redux, Server Components, optimization
                                             </div>
                                         </div>
 
@@ -307,7 +337,7 @@
                                                 <div class="skill-progress" data-progress="92"></div>
                                             </div>
                                             <div class="skill-description">
-                                                Препроцессоры, utility-first CSS, компонентный подход
+                                                Preprocessors, utility-first CSS, component approach
                                             </div>
                                         </div>
 
@@ -323,14 +353,14 @@
                                                 <div class="skill-progress" data-progress="78"></div>
                                             </div>
                                             <div class="skill-description">
-                                                Типизация, интерфейсы, generic типы, интеграция с React
+                                                Typing, interfaces, generic types, integration with React
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="skill-tags-section">
-                                    <h4>Дополнительные технологии:</h4>
+                                    <h4>Additional Technologies:</h4>
                                     <div class="skill-tags">
                                         <span class="skill-tag"><i class="fas fa-mobile-screen"></i> Responsive Design</span>
                                         <span class="skill-tag"><i class="fas fa-universal-access"></i> Accessibility (WCAG)</span>
@@ -403,7 +433,7 @@
                                 </div>
 
                                 <div class="skill-tags-section">
-                                    <h4>Другие инструменты:</h4>
+                                    <h4>Other Tools:</h4>
                                     <div class="skill-tags">
                                         <span class="skill-tag"><i class="fab fa-chrome"></i> DevTools</span>
                                         <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
@@ -421,48 +451,48 @@
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-users"></i>
                                         </div>
-                                        <h4>Командная работа</h4>
-                                        <p>Опыт работы в agile-командах, код-ревью, парное программирование</p>
+                                        <h4>Teamwork</h4>
+                                        <p>Experience working in agile teams, code reviews, pair programming</p>
                                     </div>
 
                                     <div class="soft-skill-card">
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-comments"></i>
                                         </div>
-                                        <h4>Коммуникация</h4>
-                                        <p>Эффективное общение с дизайнерами, менеджерами и клиентами</p>
+                                        <h4>Communication</h4>
+                                        <p>Effective communication with designers, managers, and clients</p>
                                     </div>
 
                                     <div class="soft-skill-card">
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-lightbulb"></i>
                                         </div>
-                                        <h4>Решение проблем</h4>
-                                        <p>Аналитический подход, поиск оптимальных решений, дебаггинг</p>
+                                        <h4>Problem Solving</h4>
+                                        <p>Analytical approach, finding optimal solutions, debugging</p>
                                     </div>
 
                                     <div class="soft-skill-card">
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-chart-line"></i>
                                         </div>
-                                        <h4>Обучаемость</h4>
-                                        <p>Быстрое освоение новых технологий, самостоятельное развитие</p>
+                                        <h4>Learning</h4>
+                                        <p>Quick learning of new technologies, self-development</p>
                                     </div>
 
                                     <div class="soft-skill-card">
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-clock"></i>
                                         </div>
-                                        <h4>Тайм-менеджмент</h4>
-                                        <p>Эффективное планирование, соблюдение дедлайнов, приоритизация</p>
+                                        <h4>Time Management</h4>
+                                        <p>Effective planning, meeting deadlines, prioritization</p>
                                     </div>
 
                                     <div class="soft-skill-card">
                                         <div class="soft-skill-icon">
                                             <i class="fas fa-brain"></i>
                                         </div>
-                                        <h4>Внимание к деталям</h4>
-                                        <p>Pixel-perfect верстка, качественный код, тщательное тестирование</p>
+                                        <h4>Attention to Detail</h4>
+                                        <p>Pixel-perfect design, clean code, thorough testing</p>
                                     </div>
                                 </div>
                             </div>
@@ -470,6 +500,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Experience Window -->
             <div class="window" id="experience-window" data-app="experience">
@@ -481,7 +512,7 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-briefcase window-icon"></i>
-                        <span>Опыт работы</span>
+                        <span>Work Experience</span>
                     </div>
                 </div>
                 <div class="window-content">
@@ -492,21 +523,24 @@
                                 <div class="timeline-content">
                                     <div class="timeline-header">
                                         <div>
-                                            <h3>Middle Markup Developer</h3>
-                                            <h4>Tech Innovation Company</h4>
+                                            <h3>Markup Developer (part time)</h3>
+                                            <h4>Arto Agency</h4>
                                         </div>
                                         <div class="timeline-period">
                                             <i class="fas fa-calendar"></i>
-                                            2023 - Настоящее время
+                                            08/2024 – Present
                                         </div>
                                     </div>
                                     <div class="timeline-description">
                                         <ul>
-                                            <li><i class="fas fa-check"></i> Разработка корпоративных веб-приложений с использованием React и TypeScript</li>
-                                            <li><i class="fas fa-check"></i> Создание переиспользуемой библиотеки UI-компонентов</li>
-                                            <li><i class="fas fa-check"></i> Оптимизация производительности приложений (Lighthouse score 95+)</li>
-                                            <li><i class="fas fa-check"></i> Проведение код-ревью и менторинг junior разработчиков</li>
-                                            <li><i class="fas fa-check"></i> Внедрение best practices и стандартов кодирования</li>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
                                         </ul>
                                         <div class="tech-stack">
                                             <span class="tech-badge">React</span>
@@ -524,21 +558,24 @@
                                 <div class="timeline-content">
                                     <div class="timeline-header">
                                         <div>
-                                            <h3>Junior Frontend Developer</h3>
-                                            <h4>Web Studio Pro</h4>
+                                            <h3>Markup Developer (part time)</h3>
+                                            <h4>Komanda</h4>
                                         </div>
                                         <div class="timeline-period">
                                             <i class="fas fa-calendar"></i>
-                                            2021 - 2023
+                                            10/2024 – Present 
                                         </div>
                                     </div>
                                     <div class="timeline-description">
                                         <ul>
-                                            <li><i class="fas fa-check"></i> Верстка адаптивных landing pages и многостраничных сайтов</li>
-                                            <li><i class="fas fa-check"></i> Интеграция верстки с CMS (WordPress, Bitrix)</li>
-                                            <li><i class="fas fa-check"></i> Работа с JavaScript библиотеками и фреймворками</li>
-                                            <li><i class="fas fa-check"></i> Обеспечение кроссбраузерной совместимости</li>
-                                            <li><i class="fas fa-check"></i> Участие в scrum-процессах, daily standup</li>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
                                         </ul>
                                         <div class="tech-stack">
                                             <span class="tech-badge">HTML/CSS</span>
@@ -556,20 +593,126 @@
                                 <div class="timeline-content">
                                     <div class="timeline-header">
                                         <div>
-                                            <h3>Trainee Frontend Developer</h3>
-                                            <h4>Digital Agency</h4>
+                                            <h3>Senior Markup Developer</h3>
+                                            <h4>Shapoval Agency</h4>
                                         </div>
                                         <div class="timeline-period">
                                             <i class="fas fa-calendar"></i>
-                                            2020 - 2021
+                                            09/2022 – present
                                         </div>
                                     </div>
                                     <div class="timeline-description">
                                         <ul>
-                                            <li><i class="fas fa-check"></i> Изучение основ веб-разработки и современных технологий</li>
-                                            <li><i class="fas fa-check"></i> Верстка простых страниц и компонентов по макетам</li>
-                                            <li><i class="fas fa-check"></i> Работа с системой контроля версий Git</li>
-                                            <li><i class="fas fa-check"></i> Участие в командных проектах под руководством senior разработчиков</li>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
+                                        </ul>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">HTML</span>
+                                            <span class="tech-badge">CSS</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Git</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <div>
+                                            <h3>Middle Markup Developer</h3>
+                                            <h4>NDA</h4>
+                                        </div>
+                                        <div class="timeline-period">
+                                            <i class="fas fa-calendar"></i>
+                                            01/2025 – 07/2025
+                                        </div>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
+                                        </ul>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">HTML</span>
+                                            <span class="tech-badge">CSS</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Git</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <div>
+                                            <h3>Teacher Markup Developer</h3>
+                                            <h4>BUKI</h4>
+                                        </div>
+                                        <div class="timeline-period">
+                                            <i class="fas fa-calendar"></i>
+                                            02/2022 – present
+                                        </div>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
+                                        </ul>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">HTML</span>
+                                            <span class="tech-badge">CSS</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                            <span class="tech-badge">Git</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <div>
+                                            <h3>Markup Developer</h3>
+                                            <h4>Lead Gen Agency — SalesAR</h4>
+                                        </div>
+                                        <div class="timeline-period">
+                                            <i class="fas fa-calendar"></i>
+                                            03/2022 – 09/2022 
+                                        </div>
+                                    </div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Optimizing the user experience.</li>
+                                            <li><i class="fas fa-check"></i> Using HTML, JavaScript and CSS to bring concepts to life.</li>
+                                            <li><i class="fas fa-check"></i> Developing and maintaining the user interface. </li>
+                                            <li><i class="fas fa-check"></i> Implementing design on mobile websites.</li>
+                                            <li><i class="fas fa-check"></i> Creating tools that improve site interaction regardless of the browser.</li>
+                                            <li><i class="fas fa-check"></i> Managing software workflow.</li>
+                                            <li><i class="fas fa-check"></i> Following SEO best practices.</li>
+                                            <li><i class="fas fa-check"></i> Fixing bugs and testing for usability.</li>
                                         </ul>
                                         <div class="tech-stack">
                                             <span class="tech-badge">HTML</span>
@@ -583,21 +726,22 @@
                         </div>
 
                         <div class="education-section">
-                            <h3><i class="fas fa-graduation-cap"></i> Образование</h3>
+                            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                             <div class="education-item">
                                 <div class="education-icon">
                                     <i class="fas fa-university"></i>
                                 </div>
                                 <div class="education-info">
-                                    <h4>Московский Государственный Технический Университет</h4>
-                                    <p>Факультет информационных технологий</p>
-                                    <p class="education-year">2016 - 2020</p>
+                                    <h4>National Aviation University</h4>
+                                    <p>Faculty of Software Engineering</p>
+                                    <p class="education-year">2007 - 2014</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Projects Window -->
             <div class="window window-large" id="projects-window" data-app="projects">
@@ -609,7 +753,7 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-folder-open window-icon"></i>
-                        <span>Проекты</span>
+                        <span>Projects</span>
                     </div>
                     <div class="window-toolbar">
                         <div class="view-switcher">
@@ -627,11 +771,13 @@
                         <div class="projects-grid active">
                             <div class="project-card featured">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234facfe;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300f2fe;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3ELuxel%3C/text%3E%3C/svg%3E" alt="Luxel Website">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234facfe;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300f2fe;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3ELuxel%3C/text%3E%3C/svg%3E"
+                                        alt="Luxel Website">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="https://akademuk.github.io/Luxel/" data-project-name="Luxel">
+                                        <button class="project-btn" data-project-url="https://akademuk.github.io/Luxel/"
+                                            data-project-name="Luxel">
                                             <i class="fas fa-eye"></i>
-                                            Посмотреть проект
+                                            View Project
                                         </button>
                                     </div>
                                     <span class="featured-badge">
@@ -645,29 +791,30 @@
                                         <span class="project-year">2024</span>
                                     </div>
                                     <p class="project-description">
-                                        Премиальный веб-сайт с элегантным дизайном и плавными анимациями.
-                                        Создан с акцентом на пользовательский опыт и визуальную привлекательность.
+                                        A premium website with elegant design and smooth animations. Built with a focus on user
+                                        experience and visual appeal.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-html5"></i> HTML5</span>
                                         <span><i class="fab fa-css3-alt"></i> CSS3</span>
                                         <span><i class="fab fa-js"></i> JavaScript</span>
-                                        <span><i class="fas fa-mobile-screen"></i> Адаптивный</span>
+                                        <span><i class="fas fa-mobile-screen"></i> Responsive</span>
                                     </div>
                                     <div class="project-stats">
                                         <span><i class="fas fa-gauge-high"></i> 98/100 Lighthouse</span>
-                                        <span><i class="fas fa-eye"></i> 15k+ посещений</span>
+                                        <span><i class="fas fa-eye"></i> 15k+ visits</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EE-Commerce%3C/text%3E%3C/svg%3E" alt="E-Commerce Platform">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EE-Commerce%3C/text%3E%3C/svg%3E"
+                                        alt="E-Commerce Platform">
                                     <div class="project-overlay">
                                         <button class="project-btn" data-project-url="#" data-project-name="E-Commerce">
                                             <i class="fas fa-eye"></i>
-                                            Посмотреть проект
+                                            View Project
                                         </button>
                                     </div>
                                     <span class="featured-badge">
@@ -681,8 +828,8 @@
                                         <span class="project-year">2024</span>
                                     </div>
                                     <p class="project-description">
-                                        Полнофункциональная платформа интернет-магазина с корзиной, фильтрами продуктов, 
-                                        системой оплаты и личным кабинетом. Реализован адаптивный дизайн и оптимизация производительности.
+                                        A full-fledged e-commerce platform with a shopping cart, product filters, payment system, and
+                                        user dashboard. Features responsive design and performance optimization.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-react"></i> React</span>
@@ -692,18 +839,20 @@
                                     </div>
                                     <div class="project-stats">
                                         <span><i class="fas fa-gauge-high"></i> 95/100 Lighthouse</span>
-                                        <span><i class="fas fa-eye"></i> 10k+ посещений</span>
+                                        <span><i class="fas fa-eye"></i> 10k+ visits</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2343e97b;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338f9d7;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EDashboard%3C/text%3E%3C/svg%3E" alt="Analytics Dashboard">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2343e97b;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338f9d7;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EDashboard%3C/text%3E%3C/svg%3E"
+                                        alt="Analytics Dashboard">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="#" data-project-name="Analytics Dashboard">
+                                        <button class="project-btn" data-project-url="#"
+                                            data-project-name="Analytics Dashboard">
                                             <i class="fas fa-eye"></i>
-                                            Посмотреть проект
+                                            View Project
                                         </button>
                                     </div>
                                 </div>
@@ -713,7 +862,7 @@
                                         <span class="project-year">2024</span>
                                     </div>
                                     <p class="project-description">
-                                        Интерактивная панель аналитики с графиками, таблицами и real-time обновлениями данных.
+                                        An interactive analytics dashboard with charts, tables, and real-time data updates.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-vuejs"></i> Vue.js</span>
@@ -725,11 +874,12 @@
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fa709a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23fee140;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad4)'/%3E%3Ctext x='50%25' y='50%25' font-size='55' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EPortfolio%3C/text%3E%3C/svg%3E" alt="Portfolio Website">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fa709a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23fee140;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad4)'/%3E%3Ctext x='50%25' y='50%25' font-size='55' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EPortfolio%3C/text%3E%3C/svg%3E"
+                                        alt="Portfolio Website">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="#" data-project-name="�����">
+                                        <button class="project-btn" data-project-url="#" data-project-name="Portfolio">
                                             <i class="fas fa-arrow-up-right-from-square"></i>
-                                            Открыть проект
+                                            Open Project
                                         </button>
                                     </div>
                                 </div>
@@ -739,7 +889,7 @@
                                         <span class="project-year">2023</span>
                                     </div>
                                     <p class="project-description">
-                                        Креативный сайт-портфолио с анимациями, параллакс эффектами и интерактивными элементами.
+                                        A creative portfolio website with animations, parallax effects, and interactive elements.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fas fa-code"></i> HTML/CSS</span>
@@ -751,11 +901,12 @@
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad5' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230093E9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2380D0C7;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad5)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3ETask App%3C/text%3E%3C/svg%3E" alt="Task Manager">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad5' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230093E9;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2380D0C7;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad5)'/%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3ETask App%3C/text%3E%3C/svg%3E"
+                                        alt="Task Manager">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="#" data-project-name="�����">
+                                        <button class="project-btn" data-project-url="#" data-project-name="Task Manager">
                                             <i class="fas fa-arrow-up-right-from-square"></i>
-                                            Открыть проект
+                                            Open Project
                                         </button>
                                     </div>
                                 </div>
@@ -765,7 +916,7 @@
                                         <span class="project-year">2023</span>
                                     </div>
                                     <p class="project-description">
-                                        Приложение для управления задачами с drag-and-drop, категориями и уведомлениями.
+                                        A task management app with drag-and-drop, categories, and notifications.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-react"></i> React</span>
@@ -777,11 +928,12 @@
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f12711;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23f5af19;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad6)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EWeather App%3C/text%3E%3C/svg%3E" alt="Weather App">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f12711;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23f5af19;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad6)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EWeather App%3C/text%3E%3C/svg%3E"
+                                        alt="Weather App">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="#" data-project-name="�����">
+                                        <button class="project-btn" data-project-url="#" data-project-name="Weather App">
                                             <i class="fas fa-arrow-up-right-from-square"></i>
-                                            Открыть проект
+                                            Open Project
                                         </button>
                                     </div>
                                 </div>
@@ -791,7 +943,7 @@
                                         <span class="project-year">2023</span>
                                     </div>
                                     <p class="project-description">
-                                        Приложение прогноза погоды с геолокацией, анимированными иконками и детальной информацией.
+                                        A weather forecast app with geolocation, animated icons, and detailed information.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-react"></i> React</span>
@@ -803,11 +955,12 @@
 
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad7' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234776E6;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238E54E9;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad7)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EUI Library%3C/text%3E%3C/svg%3E" alt="UI Components">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad7' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234776E6;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%238E54E9;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad7)'/%3E%3Ctext x='50%25' y='50%25' font-size='50' text-anchor='middle' dy='.35em' fill='white' font-family='Arial'%3EUI Library%3C/text%3E%3C/svg%3E"
+                                        alt="UI Components">
                                     <div class="project-overlay">
-                                        <button class="project-btn" data-project-url="#" data-project-name="�����">
+                                        <button class="project-btn" data-project-url="#" data-project-name="UI Library">
                                             <i class="fas fa-arrow-up-right-from-square"></i>
-                                            Открыть проект
+                                            Open Project
                                         </button>
                                     </div>
                                 </div>
@@ -817,7 +970,7 @@
                                         <span class="project-year">2024</span>
                                     </div>
                                     <p class="project-description">
-                                        Переиспользуемая библиотека React компонентов с документацией и примерами использования.
+                                        A reusable React component library with documentation and usage examples.
                                     </p>
                                     <div class="project-tech">
                                         <span><i class="fab fa-react"></i> React</span>
@@ -829,11 +982,12 @@
                         </div>
 
                         <div class="projects-list">
-                            <!-- List view будет генерироваться через JS -->
+                            <!-- List view will be generated through JS -->
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Contacts Window -->
             <div class="window" id="contacts-window" data-app="contacts">
@@ -845,18 +999,18 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-address-book window-icon"></i>
-                        <span>Контакты</span>
+                        <span>Contacts</span>
                     </div>
                 </div>
                 <div class="window-content">
                     <div class="contacts-container">
                         <h2 class="contacts-heading">
                             <i class="fas fa-paper-plane"></i>
-                            Давайте работать вместе!
+                            Let's work together!
                         </h2>
                         <p class="contacts-subheading">
-                            Открыт для новых возможностей и интересных проектов. 
-                            Свяжитесь со мной любым удобным способом.
+                            Open to new opportunities and interesting projects. 
+                            Feel free to contact me through any of the following methods.
                         </p>
 
                         <div class="contacts-grid">
@@ -917,8 +1071,8 @@
                                     <i class="fas fa-location-dot"></i>
                                 </div>
                                 <div class="contact-info">
-                                    <h4>Местоположение</h4>
-                                    <p>Москва, Россия</p>
+                                    <h4>Location</h4>
+                                    <p>Moscow, Russia</p>
                                 </div>
                             </div>
 
@@ -927,21 +1081,21 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="contact-info">
-                                    <h4>Телефон</h4>
+                                    <h4>Phone</h4>
                                     <p>+7 (XXX) XXX-XX-XX</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="contact-form-section">
-                            <h3><i class="fas fa-message"></i> Или напишите мне</h3>
+                            <h3><i class="fas fa-message"></i> Or write to me</h3>
                             <form class="contact-form" id="contact-form">
                                 <div class="form-group">
                                     <label for="name">
                                         <i class="fas fa-user"></i>
-                                        Ваше имя
+                                        Your Name
                                     </label>
-                                    <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                                    <input type="text" id="name" name="name" required placeholder="Ivan Ivanov">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">
@@ -953,19 +1107,20 @@
                                 <div class="form-group">
                                     <label for="message">
                                         <i class="fas fa-comment"></i>
-                                        Сообщение
+                                        Message
                                     </label>
-                                    <textarea id="message" name="message" required rows="4" placeholder="Расскажите о вашем проекте..."></textarea>
+                                    <textarea id="message" name="message" required rows="4" placeholder="Tell me about your project..."></textarea>
                                 </div>
                                 <button type="submit" class="submit-btn">
                                     <i class="fas fa-paper-plane"></i>
-                                    Отправить сообщение
+                                    Send Message
                                 </button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Settings Window -->
             <div class="window" id="settings-window" data-app="settings">
@@ -977,7 +1132,7 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-gear window-icon"></i>
-                        <span>Настройки системы</span>
+                        <span>System Settings</span>
                     </div>
                 </div>
                 <div class="window-content">
@@ -986,58 +1141,58 @@
                             <div class="settings-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
                                 <i class="fas fa-palette"></i>
                             </div>
-                            <h4>Внешний вид</h4>
-                            <p>Тема, обои, цвета</p>
+                            <h4>Appearance</h4>
+                            <p>Theme, wallpaper, colors</p>
                         </div>
                         <div class="settings-category" id="cursor-settings">
                             <div class="settings-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
                                 <i class="fas fa-mouse-pointer"></i>
                             </div>
-                            <h4>Курсор</h4>
-                            <p>Эффекты частиц</p>
+                            <h4>Cursor</h4>
+                            <p>Particle effects</p>
                         </div>
                         <div class="settings-category">
                             <div class="settings-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
                                 <i class="fas fa-bell"></i>
                             </div>
-                            <h4>Уведомления</h4>
-                            <p>Оповещения</p>
+                            <h4>Notifications</h4>
+                            <p>Alerts</p>
                         </div>
                         <div class="settings-category">
                             <div class="settings-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
                                 <i class="fas fa-keyboard"></i>
                             </div>
-                            <h4>Клавиатура</h4>
-                            <p>Горячие клавиши</p>
+                            <h4>Keyboard</h4>
+                            <p>Hotkeys</p>
                         </div>
                         <div class="settings-category">
                             <div class="settings-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
                                 <i class="fas fa-music"></i>
                             </div>
-                            <h4>Звук</h4>
-                            <p>Громкость, эффекты</p>
+                            <h4>Sound</h4>
+                            <p>Volume, effects</p>
                         </div>
                         <div class="settings-category">
                             <div class="settings-icon" style="background: linear-gradient(135deg, #30cfd0, #330867);">
                                 <i class="fas fa-circle-info"></i>
                             </div>
-                            <h4>Об этой системе</h4>
-                            <p>Версия, характеристики</p>
+                            <h4>About This System</h4>
+                            <p>Version, specs</p>
                         </div>
                     </div>
-                    
+
                     <div class="settings-panel" id="cursor-panel" style="display: none;">
                         <div class="settings-header">
                             <button class="back-btn" id="settings-back">
-                                <i class="fas fa-arrow-left"></i> Назад
+                                <i class="fas fa-arrow-left"></i> Back
                             </button>
-                            <h3><i class="fas fa-mouse-pointer"></i> Настройки курсора</h3>
+                            <h3><i class="fas fa-mouse-pointer"></i> Cursor Settings</h3>
                         </div>
                         <div class="settings-options">
                             <div class="setting-item">
                                 <div class="setting-label">
-                                    <h4>Эффект частиц</h4>
-                                    <p>Цветные частицы следуют за курсором</p>
+                                    <h4>Particle Effect</h4>
+                                    <p>Colored particles follow the cursor</p>
                                 </div>
                                 <label class="toggle-switch">
                                     <input type="checkbox" id="particles-toggle" checked>
@@ -1046,8 +1201,8 @@
                             </div>
                             <div class="setting-item">
                                 <div class="setting-label">
-                                    <h4>Эффект при клике</h4>
-                                    <p>Волны при нажатии мыши</p>
+                                    <h4>Click Effect</h4>
+                                    <p>Waves when clicking the mouse</p>
                                 </div>
                                 <label class="toggle-switch">
                                     <input type="checkbox" id="click-effect-toggle" checked>
@@ -1056,8 +1211,8 @@
                             </div>
                             <div class="setting-item">
                                 <div class="setting-label">
-                                    <h4>Количество частиц</h4>
-                                    <p>Больше частиц = красивее, но медленнее</p>
+                                    <h4>Particle Amount</h4>
+                                    <p>More particles = prettier, but slower</p>
                                 </div>
                                 <input type="range" id="particle-amount" min="10" max="100" value="50" class="slider">
                                 <span class="slider-value" id="particle-value">50</span>
@@ -1066,6 +1221,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Terminal Window -->
             <div class="window terminal-window" id="terminal-window" data-app="terminal">
@@ -1102,6 +1258,7 @@
                 </div>
             </div>
 
+
             <!-- Project Viewer Window -->
             <div class="window window-large" id="project-viewer" data-app="viewer">
                 <div class="window-header">
@@ -1112,28 +1269,30 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-globe window-icon"></i>
-                        <span id="viewer-title">Просмотр проекта</span>
+                        <span id="viewer-title">Project Viewer</span>
                     </div>
                     <div class="window-toolbar">
-                        <button class="toolbar-btn" id="viewer-back" title="Назад">
+                        <button class="toolbar-btn" id="viewer-back" title="Back">
                             <i class="fas fa-arrow-left"></i>
                         </button>
-                        <button class="toolbar-btn" id="viewer-forward" title="Вперед">
+                        <button class="toolbar-btn" id="viewer-forward" title="Forward">
                             <i class="fas fa-arrow-right"></i>
                         </button>
-                        <button class="toolbar-btn" id="viewer-reload" title="Обновить">
+                        <button class="toolbar-btn" id="viewer-reload" title="Reload">
                             <i class="fas fa-rotate-right"></i>
                         </button>
                         <input type="text" class="url-bar" id="viewer-url" readonly>
-                        <button class="toolbar-btn" id="viewer-external" title="Открыть в новой вкладке">
+                        <button class="toolbar-btn" id="viewer-external" title="Open in new tab">
                             <i class="fas fa-arrow-up-right-from-square"></i>
                         </button>
                     </div>
                 </div>
                 <div class="window-content" style="padding: 0;">
-                    <iframe id="project-iframe" style="width: 100%; height: 100%; border: none; background: white;"></iframe>
+                    <iframe id="project-iframe"
+                        style="width: 100%; height: 100%; border: none; background: white;"></iframe>
                 </div>
             </div>
+
 
             <!-- Live Chat Window (Messages App Style) -->
             <div class="window" id="chat-window" data-app="chat">
@@ -1145,7 +1304,7 @@
                     </div>
                     <div class="window-title">
                         <i class="fas fa-message window-icon"></i>
-                        <span>Чат с рекрутером</span>
+                        <span>Chat</span>
                     </div>
                 </div>
                 <div class="window-content" style="padding: 0; display: flex; flex-direction: column;">
@@ -1163,24 +1322,24 @@
                         </div>
                         <div class="chat-info">
                             <i class="fas fa-info-circle"></i>
-                            <span>Сообщения отправляются в Telegram</span>
+                            <span>Messages will be sent to Telegram</span>
                         </div>
                     </div>
-                    
+
                     <div class="chat-messages" id="chat-messages">
-                        <div class="chat-date">Сегодня</div>
-                        
+                        <div class="chat-date">Today</div>
+
                         <div class="message received">
                             <div class="message-avatar">OF</div>
                             <div class="message-content">
                                 <div class="message-bubble">
-                                    Привет! 👋 Я Олег, Middle Markup Developer. <br>
-                                    Напишите мне, и я получу ваше сообщение в Telegram и отвечу в реальном времени!
+                                    Hi! 👋 I'm Oleg, a Middle Markup Developer. <br>
+                                    Send me a message, and I'll receive it in Telegram and reply in real-time!
                                 </div>
-                                <div class="message-time">Только что</div>
+                                <div class="message-time">Just now</div>
                             </div>
                         </div>
-                        
+
                         <div class="typing-indicator" id="typing-indicator" style="display: none;">
                             <div class="message-avatar">OF</div>
                             <div class="typing-dots">
@@ -1190,32 +1349,27 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="chat-input-container">
-                        <button class="chat-btn" id="attach-btn" title="Прикрепить файл">
+                        <button class="chat-btn" id="attach-btn" title="Attach File">
                             <i class="fas fa-paperclip"></i>
                         </button>
                         <div class="chat-input-wrapper">
-                            <input 
-                                type="text" 
-                                class="chat-input" 
-                                id="chat-input" 
-                                placeholder="Напишите сообщение..."
-                                maxlength="500"
-                            >
+                            <input type="text" class="chat-input" id="chat-input" placeholder="Type a message..." maxlength="500">
                             <div class="char-counter" id="char-counter">0/500</div>
                         </div>
-                        <button class="chat-btn send-btn" id="send-btn" title="Отправить (Enter)">
+                        <button class="chat-btn send-btn" id="send-btn" title="Send (Enter)">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
-                    
+
                     <div class="chat-warning">
                         <i class="fas fa-shield-halved"></i>
-                        <span>Все сообщения зашифрованы и отправляются через Telegram Bot API</span>
+                        <span>All messages are encrypted and sent through the Telegram Bot API</span>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <!-- Dock -->
@@ -1280,24 +1434,25 @@
                     <span class="dock-label">Terminal</span>
                 </div>
 
-                <div class="dock-item" id="trash" title="Корзина">
+                <div class="dock-item" id="trash" title="Trash">
                     <div class="dock-icon">
                         <i class="fas fa-trash"></i>
                     </div>
-                    <span class="dock-label">Корзина</span>
+                    <span class="dock-label">Trash</span>
                 </div>
             </div>
         </div>
+
 
         <!-- Spotlight Search -->
         <div class="spotlight" id="spotlight">
             <div class="spotlight-container">
                 <div class="spotlight-search">
                     <i class="fas fa-magnifying-glass"></i>
-                    <input type="text" id="spotlight-input" placeholder="Поиск Spotlight" autocomplete="off">
+                    <input type="text" id="spotlight-input" placeholder="Spotlight Search" autocomplete="off">
                 </div>
                 <div class="spotlight-results" id="spotlight-results">
-                    <!-- Результаты поиска -->
+                    <!-- Search Results -->
                 </div>
             </div>
         </div>
@@ -1305,7 +1460,7 @@
         <!-- Notification Center -->
         <div class="notification-center" id="notification-center">
             <div class="notification-header">
-                <h3>Центр уведомлений</h3>
+                <h3>Notification Center</h3>
                 <button class="clear-btn" id="clear-notifications">
                     <i class="fas fa-xmark"></i>
                 </button>
@@ -1316,28 +1471,29 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <div class="notification-content">
-                        <h4>Добро пожаловать!</h4>
-                        <p>Спасибо за интерес к моему портфолио. Изучайте проекты и навыки!</p>
-                        <span class="notification-time">Только что</span>
+                        <h4>Welcome!</h4>
+                        <p>Thank you for your interest in my portfolio. Explore the projects and skills!</p>
+                        <span class="notification-time">Just now</span>
                     </div>
                 </div>
             </div>
         </div>
 
+
         <!-- Context Menu -->
         <div class="context-menu" id="context-menu">
             <div class="context-menu-item" data-action="new-window">
                 <i class="fas fa-window-restore"></i>
-                <span>Новое окно</span>
+                <span>New Window</span>
             </div>
             <div class="context-menu-item" data-action="refresh">
                 <i class="fas fa-rotate"></i>
-                <span>Обновить</span>
+                <span>Refresh</span>
             </div>
             <div class="context-menu-divider"></div>
             <div class="context-menu-item" data-action="wallpaper">
                 <i class="fas fa-image"></i>
-                <span>Изменить обои</span>
+                <span>Change Wallpaper</span>
             </div>
         </div>
 
@@ -1376,6 +1532,7 @@
         </div>
     </div>
 
-    <script src="script_new.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
