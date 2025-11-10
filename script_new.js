@@ -230,6 +230,14 @@ class MacOSPortfolio {
             this.isDragging = true;
             this.activeWindow = window;
             
+            // If window has transform, remove it and calculate actual position
+            if (window.style.transform && window.style.transform !== 'none') {
+                const rect = window.getBoundingClientRect();
+                window.style.transform = 'none';
+                window.style.left = rect.left + 'px';
+                window.style.top = rect.top + 'px';
+            }
+            
             const rect = window.getBoundingClientRect();
             this.dragOffset.x = e.clientX - rect.left;
             this.dragOffset.y = e.clientY - rect.top;
@@ -325,15 +333,10 @@ class MacOSPortfolio {
     }
 
     centerWindow(windowElement) {
-        const container = document.querySelector('.windows-container');
-        const containerRect = container.getBoundingClientRect();
-        const windowRect = windowElement.getBoundingClientRect();
-        
-        const left = (containerRect.width - windowRect.width) / 2;
-        const top = (containerRect.height - windowRect.height) / 2 + 28; // Account for menu bar
-        
-        windowElement.style.left = Math.max(20, left) + 'px';
-        windowElement.style.top = Math.max(28, top) + 'px';
+        // Perfect centering using translate
+        windowElement.style.left = '50%';
+        windowElement.style.top = '50%';
+        windowElement.style.transform = 'translate(-50%, -50%)';
     }
 
     updateDock(appName, isActive) {
